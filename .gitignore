@@ -1,0 +1,16 @@
+node_modules
+
+# SvelteKit generated files
+.svelte-kit
+build
+
+# Vite
+.vite
+
+# Env files
+.env
+.env.*
+!.env.example
+
+# OS / editor
+.DS_Store

@@ -1,0 +1,20 @@
+/* Single Tailwind v4 entry point: this one import replaces the old
+   @tailwind base/components/utilities directives from Tailwind v3. */
+@import 'tailwindcss';
+
+/* Minimal readable defaults for markdown-rendered content (project bodies,
+   the About bio). No design system here on purpose — just enough so text
+   and images don't run together; restyle freely later. */
+.markdown-body p {
+	margin-top: 1.25rem;
+}
+.markdown-body h3 {
+	margin-top: 2rem;
+	font-size: 1.25rem;
+	font-weight: 600;
+}
+.markdown-body img {
+	margin-top: 1.25rem;
+	max-width: 100%;
+	border-radius: 0.25rem;
+}
