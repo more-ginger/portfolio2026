@@ -9,7 +9,7 @@ import personal from '$lib/content/personal.json';
 const aboutFiles = import.meta.glob('/src/lib/content/about.md', {
 	query: '?raw',
 	import: 'default',
-	eager: true
+	eager: true,
 });
 const [aboutRaw] = Object.values(aboutFiles);
 const { data: bio, content } = matter(aboutRaw);
@@ -23,7 +23,7 @@ export function getAbout() {
 		// Newest first, matching the original site's ordering.
 		publications: [...personal.publications].reverse(),
 		talks: [...personal.talks].reverse(),
-		clients: [...personal.clients].reverse()
+		clients: [...personal.clients].reverse(),
 		// `personal.exhibitions` also exists in the data but, like on the
 		// original site, isn't rendered on the About page.
 	};

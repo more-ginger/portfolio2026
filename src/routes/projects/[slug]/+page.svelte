@@ -15,7 +15,7 @@
 	<h1 class="text-3xl font-bold">{frontMatter.title}</h1>
 
 	{#if frontMatter.description}
-		<p class="mt-4 text-lg italic text-gray-600">{frontMatter.description}</p>
+		<p class="mt-4 text-lg text-gray-600 italic">{frontMatter.description}</p>
 	{/if}
 
 	<div class="mt-6 flex flex-wrap gap-x-10 gap-y-2 text-sm text-gray-500">

@@ -28,7 +28,7 @@
 	<h2 class="border-b border-gray-300 pb-1 text-lg font-semibold">Academic publications</h2>
 	<table class="mt-4 w-full text-left text-sm">
 		<tbody>
-			{#each data.publications as pub}
+			{#each data.publications as pub (pub.link)}
 				<tr class="border-t border-gray-200 align-top">
 					<td class="py-2 pr-4 text-xs whitespace-nowrap text-gray-400">{pub.year}</td>
 					<td class="py-2 pr-4">
@@ -45,7 +45,7 @@
 	<h2 class="border-b border-gray-300 pb-1 text-lg font-semibold">Teaching and public talks</h2>
 	<table class="mt-4 w-full text-left text-sm">
 		<tbody>
-			{#each data.talks as talk}
+			{#each data.talks as talk (talk.title)}
 				<tr class="border-t border-gray-200 align-top">
 					<td class="py-2 pr-4 text-xs whitespace-nowrap text-gray-400">
 						{talk.year}, {talk.place}
@@ -60,6 +60,8 @@
 <section class="mt-12">
 	<h2 class="border-b border-gray-300 pb-1 text-lg font-semibold">Selected clients</h2>
 	<p class="mt-4 text-sm">
-		{#each data.clients as client, i}{client}{i < data.clients.length - 1 ? ' ⚬ ' : ''}{/each}
+		{#each data.clients as client, i (client)}{client}{i < data.clients.length - 1
+				? ' ⚬ '
+				: ''}{/each}
 	</p>
 </section>

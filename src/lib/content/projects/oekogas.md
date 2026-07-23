@@ -19,6 +19,7 @@ description: The project consists in a lightweight search dashboard that can be
   story published by the investigative team at Correctiv.
 himage: /uploads/oekogas/oekogas-header.png
 ---
+
 Gas suppliers across Germany are advertising “climate-neutral natural gas” - but they are not keeping their promises, as reveald by CORRECTIV . Instead, protected forests are supposedly being cut down and even gas-fired power plants are being expanded. This investigation shows how companies are deceiving hundreds of thousands of customers and fueling the climate crisis.
 
 ![](/uploads/oekogas/oekogas-figure-1.png)

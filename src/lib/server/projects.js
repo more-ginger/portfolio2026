@@ -11,7 +11,7 @@ import { marked } from 'marked';
 const projectFiles = import.meta.glob('/src/lib/content/projects/*.md', {
 	query: '?raw',
 	import: 'default',
-	eager: true
+	eager: true,
 });
 
 /**
@@ -32,7 +32,7 @@ function loadProjects() {
 			slug,
 			// Front matter fields: title, authors, categories, date, description, himage, link, ...
 			data,
-			html: marked.parse(content)
+			html: marked.parse(content),
 		};
 	});
 

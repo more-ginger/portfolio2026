@@ -7,12 +7,12 @@
 	let { children } = $props();
 </script>
 
-<div class="min-h-screen bg-white text-gray-900">
-	<header class="border-b border-gray-200 px-6 py-4">
+<div class="min-h-screen bg-amber-200 text-red-900">
+	<header class="px-6 py-4">
 		<nav class="flex gap-6">
 			<a href="/" class="font-semibold hover:underline">Francesca Morini</a>
 			<a href="/" class="hover:underline">Projects</a>
-			<a href="/about" class="hover:underline">About</a>
+			<!-- <a href="/about" class="hover:underline">About</a> -->
 		</nav>
 	</header>
 

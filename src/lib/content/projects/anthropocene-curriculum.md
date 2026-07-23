@@ -8,7 +8,7 @@ authors:
   - Alan Woo
   - Christoph Rosol
   - Dirk Wintergrün
-link: "https://www.anthropocene-curriculum.org/anthropogenic-markers "
+link: 'https://www.anthropocene-curriculum.org/anthropogenic-markers '
 categories:
   - Digital humanities
   - Web development
@@ -20,6 +20,7 @@ description: This generative visualization complements seven thematic dossiers
 himage: /uploads/anthropocene-curriculum/dmacp-pip.png
 category: Archive
 ---
+
 The special publication Anthropogenic Markers: Stratigraphy and Context explores and contours some of the historical contexts, epistemic settings, and conceptual interventions around the ongoing work of Anthropocene geology. In seven thematic dossiers, contributions from the fields of geochemistry and paleobiology, history and science studies, artistic research, archaeology, literary studies, and anthropology reflect on selected material markers of human impacts on earthly strata. Taken together, they form a unique interdisciplinary conversation across positions and perspectives, helping to map out and expand upon the many ways of tracing the evidence that defines the onset of a human-dominated and crisis-laden epoch.
 
 ![](/uploads/anthropocene-curriculum/video_amd.gif)

@@ -16,13 +16,14 @@ description: '"The Good News" is the weekly data visualization produced for the
 himage: /uploads/zukunft-good-news/zukunft-preview.png
 category: Data journalism
 ---
-Every Saturday, readers can find *die Gute Nachricht* (the good news) on the cover of the Zukunft section, part of the wochentaz. The idea, developed by Luise Strothmann and Malene Gürgen together with their team, is to offer readers a positive take on an interesting and contemporary topic. Ranging from climate protection to the reduction of the gender-gap, each good news is introduced by a data visualization, blending photographic and design elements.
+
+Every Saturday, readers can find _die Gute Nachricht_ (the good news) on the cover of the Zukunft section, part of the wochentaz. The idea, developed by Luise Strothmann and Malene Gürgen together with their team, is to offer readers a positive take on an interesting and contemporary topic. Ranging from climate protection to the reduction of the gender-gap, each good news is introduced by a data visualization, blending photographic and design elements.
 
 ![](/uploads/zukunft-good-news/zukunft_printed_2.jpg)
 
 ### Balancing topics, metaphors, and data visualization
 
-The biggest design challenge we face with *die Gute Nachricht* is to always find a delicate balance between the topic, its visual representation, and the chart type. In the past, we had to work with very sensitive topics like cancer, migration, and the legalization of human rights.
+The biggest design challenge we face with _die Gute Nachricht_ is to always find a delicate balance between the topic, its visual representation, and the chart type. In the past, we had to work with very sensitive topics like cancer, migration, and the legalization of human rights.
 
 The two examples shown below are a good example of the type of interpretation work we do when working on the graphics. The issue on the left depicts the decriminialization of queer sex by showing each country in the form of a flower. We chose flowers to signal the fragile condition queer people have to face and the importance of granting equal rights, beyond politics and religious beliefs. Similarly, the visualization on the right shows data about working hours. The images of people are picked from old archival imagery and strive at representing diverse workers in different scenarios.
 

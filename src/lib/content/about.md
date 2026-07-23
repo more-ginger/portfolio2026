@@ -1,9 +1,9 @@
 ---
-title: About Francesca
-description: My name is Francesca. I am a designer, researcher, and amateur baker. Currently, I work at Södertörn University, Huddinge, Stockholm.
-portrait: /uploads/about/about-portait.jpg
-portraitCaption: This is me with one of my chickens ❤️
+title: I am Francesca Morini, information designer and visualization researcher.
+description: I am based in Berlin and work as Guest Professor for Information Visulization and Management at the University of Applied Sciences Potsdam.
+portrait: [/uploads/about/about-illustration-01.png, /uploads/about/about-illustration-02.png]
 ---
-I am an information designer, researcher, and amateur baker. I research data visualization and data journalism. I have a PhD in Media and Communication Studies from [Södertörn University](https://www.sh.se/english/sodertorn-university), Huddinge, Sweden.
 
-I work as a post-doc at the [Film University Babelsberg KONRAD WOLF](https://www.filmuniversitaet.de/), Potsdam, Germany. I am associated with the [Metalab Harvard & Berlin](https://mlml.io/m/francesca-morini/) and with the [UCLAB](https://uclab.fh-potsdam.de/people/francesca-morini/) at the University of Applied Sciences Potsdam, Germany.
+I work at the [University of Applied Sciences Potsdam](<>) as professor for Information Visualization and Management. There, I am also affiliated with the [UCLAB](<>), a research group in between visualization and the humanities.
+
+I have a PhD in Media and Communication Studies from [Södertörn University](<>), in Sweden. I worked as Postdoctoral Research Fellow at the [Metalab Harvard & Berlin](<>).

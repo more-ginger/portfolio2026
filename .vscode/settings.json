@@ -1,0 +1,13 @@
+{
+	// Format with Prettier whenever a file is saved.
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"[svelte]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	// Also run ESLint's auto-fixes on save (unused imports, etc.).
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "explicit"
+	},
+	"eslint.validate": ["javascript", "svelte"]
+}

@@ -1,5 +1,5 @@
 ---
-title: "MVRDVHNI: The Living Archive of a Studio"
+title: 'MVRDVHNI: The Living Archive of a Studio'
 slug: living-archive-mvrdv
 authors:
   - Giacomo Nanni
@@ -8,20 +8,17 @@ categories:
   - Web development
   - Text visualization
 date: February 15, 2022 6:54 PM
-description: "Project developed for “MVRDVHNI: The Living Archive of a Studio”
+description: 'Project developed for “MVRDVHNI: The Living Archive of a Studio”
   exhibition. The visualization arranges, on a timeline, the topics discussed by
-  MVRDV in their documents and email exchanges, from 1990 to 2010."
+  MVRDV in their documents and email exchanges, from 1990 to 2010.'
 himage: /uploads/living-archive-mvrdv/mvrdv-timeline-preview.png
 category: Archive
 ---
+
 After gaining access to the MVRDV architecture studio’s archive, we decided to visualise how they talked about architecture for over 10 years. We started by collecting, cleaning and unwrapping all the e-mails between colleagues, contractors and the PR team. We extracted the relevant words that dealt with the financial, environmental or material aspects of architecture. Then we created two of visualisations that allow exploration, where users can filter relevant terms according to their category and frequency.
 On top of this we trained an AI using the material for PR. Visitors can feed the AI few words to draft a speculative MVRDV project. @mvrdvsht is the twitter fee where this non-sense architecture is collected.
 
-
-
 ![](/uploads/living-archive-mvrdv/mvrdv-timeline-filtered.png)
-
-
 
 ### From an archive full of emails to vis
 
