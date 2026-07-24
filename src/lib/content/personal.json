@@ -55,6 +55,88 @@
 			"publication": "Södertörns högskola"
 		}
 	],
+	"teaching": [
+		{
+			"year": "WiSe 2020/21",
+			"place": "FHP, Potsdam",
+			"title": "Data Talks / Data Walks",
+			"description": "",
+			"link": "",
+			"icon": "📚"
+		},
+		{
+			"year": "WiSe 2020/21",
+			"place": "FHP, Potsdam",
+			"title": "Scrollytelling for Beginners",
+			"description": "Online lectures for the Planetary Scrollytelling course",
+			"link": "https://github.com/more-ginger/scrollytelling-beginners",
+			"icon": "📚"
+		},
+		{
+			"year": "SoSe 2023",
+			"place": "Merz Akademie, Stuttgart",
+			"title": "Bachelor course in data visualization",
+			"description": "",
+			"link": "",
+			"icon": "📚"
+		},
+		{
+			"year": "WiSe 2024/25",
+			"place": "FHP, Potsdam",
+			"title": "Deconstructing User Interfaces",
+			"description": "",
+			"link": "",
+			"icon": "📚"
+		},
+		{
+			"year": "WiSe 2025/26",
+			"place": "FHP, Potsdam",
+			"title": "Deconstructing User Interfaces",
+			"description": "",
+			"link": "",
+			"icon": "📚"
+		},
+		{
+			"year": "WiSe 2025/26",
+			"place": "FHP, Potsdam",
+			"title": "Urban Futures Reading Group",
+			"description": "",
+			"link": "",
+			"icon": "📚"
+		},
+		{
+			"year": "WiSe 2025/26",
+			"place": "FHP, Potsdam",
+			"title": "Stadt als Komplexe Systeme",
+			"description": "",
+			"link": "",
+			"icon": "📚"
+		},
+		{
+			"year": "SoSe 2026",
+			"place": "FHP, Potsdam",
+			"title": "Information Visualization",
+			"description": "",
+			"link": "",
+			"icon": "📚"
+		},
+		{
+			"year": "SoSe 2026",
+			"place": "FHP, Potsdam",
+			"title": "Visualizing Sustainability Models",
+			"description": "",
+			"link": "",
+			"icon": "📚"
+		},
+		{
+			"year": "SoSe 2026",
+			"place": "FHP, Potsdam",
+			"title": "City Data Atelier",
+			"description": "",
+			"link": "",
+			"icon": "📚"
+		}
+	],
 	"talks": [
 		{
 			"year": "2019",
@@ -71,22 +153,6 @@
 			"description": "Emotional Maps: Seeding Context, Cultivating Perspectives",
 			"link": "https://www.meetup.com/de-DE/Maptime-BER/events/266513718/",
 			"icon": "🗣️"
-		},
-		{
-			"year": "2020",
-			"place": "FHP, Potsdam",
-			"title": "Data Talks / Data Walks",
-			"description": "",
-			"link": "",
-			"icon": "📚"
-		},
-		{
-			"year": "2020",
-			"place": "FHP, Potsdam",
-			"title": "Scrollytelling for Beginners",
-			"description": "Online lectures for the Planetary Scrollytelling course",
-			"link": "https://github.com/more-ginger/scrollytelling-beginners",
-			"icon": "📚"
 		},
 		{
 			"year": "2021",
@@ -111,14 +177,6 @@
 			"description": "",
 			"link": "",
 			"icon": "🗣️"
-		},
-		{
-			"year": "2023",
-			"place": "Merz Akademie, Stuttgart",
-			"title": "Bachelor course in data visualization",
-			"description": "",
-			"link": "",
-			"icon": "📚"
 		},
 		{
 			"year": "2023",
@@ -159,14 +217,6 @@
 			"description": "",
 			"link": "",
 			"icon": "🗣️"
-		},
-		{
-			"year": "2024",
-			"place": "FHP, Potsdam",
-			"title": "Deconstructing User Interfaces",
-			"description": "",
-			"link": "",
-			"icon": "📚"
 		}
 	],
 	"exhibitions": [

@@ -10,7 +10,7 @@ categories:
   - Web development
   - Print
   - Urban visualization
-date: October 1, 2019 6:54 PM
+date: 2020
 description: Time of a Square is an interactive long read scrollable article and
   printed booklet that let the reader explore temporality in Rosenthaler Platz,
   Berlin.

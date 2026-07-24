@@ -12,11 +12,10 @@ categories:
   - Data journalism
   - web development
   - UI design
-date: April 16, 2024 10:37 AM
+date: 2024
 description: The project consists in a lightweight search dashboard that can be
   used to browse German gas supplier and the supposedly carbon-offsetting
-  projects they finance. The dashboard is embedded in a broader investigative
-  story published by the investigative team at Correctiv.
+  projects they finance.
 himage: /uploads/oekogas/oekogas-header.png
 ---
 

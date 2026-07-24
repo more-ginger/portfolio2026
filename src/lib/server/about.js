@@ -24,6 +24,7 @@ export function getAbout() {
 		publications: [...personal.publications].reverse(),
 		talks: [...personal.talks].reverse(),
 		clients: [...personal.clients].reverse(),
+		teaching: [...personal.teaching].reverse(),
 		// `personal.exhibitions` also exists in the data but, like on the
 		// original site, isn't rendered on the About page.
 	};

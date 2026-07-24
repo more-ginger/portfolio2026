@@ -1,5 +1,5 @@
 ---
-title: 'Visualizing Climate Scenarios: the SENSES Toolkit'
+title: 'The SENSES Toolkit'
 slug: senses-climate-scenarios
 authors:
   - Boris Müller
@@ -10,7 +10,7 @@ link: https://climatescenarios.org/toolkit/
 categories:
   - Climate visualization
   - Web development
-date: May 20, 2020 6:54 PM
+date: 2020
 description: SENSES is a project about climate change scenarios. Each
   visualization explains different climate futures to policy-makers, finance
   experts, and citizens.

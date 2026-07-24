@@ -1,0 +1,35 @@
+/* @font-face declarations for the two custom typefaces (files live in
+   static/fonts/, which SvelteKit serves as-is at the site root).
+   `font-display: swap` shows fallback text immediately instead of making
+   the reader wait on the font file before anything is visible. */
+
+/* TT Qurdisma — only ships a single (Regular) weight/style. */
+@font-face {
+	font-family: 'TT Qurdisma';
+	src:
+		url('/fonts/tt-qurdisma/TT_Qurdisma_Regular.woff2') format('woff2'),
+		url('/fonts/tt-qurdisma/TT_Qurdisma_Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* PP Object Sans — only Regular and Bold are needed for this site. */
+@font-face {
+	font-family: 'PP Object Sans';
+	src:
+		url('/fonts/pp-object-sans/PPObjectSans-Regular.woff2') format('woff2'),
+		url('/fonts/pp-object-sans/PPObjectSans-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'PP Object Sans';
+	src:
+		url('/fonts/pp-object-sans/PPObjectSans-Bold.woff2') format('woff2'),
+		url('/fonts/pp-object-sans/PPObjectSans-Bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}

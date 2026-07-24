@@ -2,6 +2,48 @@
    @tailwind base/components/utilities directives from Tailwind v3. */
 @import 'tailwindcss';
 
+/* @font-face rules for the two custom typefaces (see src/fonts.css). */
+@import './fonts.css';
+
+/* Tailwind v4 reads design tokens straight from CSS — anything defined
+   here under `--font-*` becomes a `font-*` utility class automatically.
+   This adds `font-qurdisma` and `font-object-sans` alongside Tailwind's
+   built-in `font-sans` / `font-serif` / `font-mono`, without overriding them. */
+@theme {
+	--font-qurdisma: 'TT Qurdisma', ui-serif, serif;
+	--font-object-sans: 'PP Object Sans', ui-sans-serif, system-ui, sans-serif;
+
+	--shadow-md: 5px 5px 0px rgba(127, 29, 29, 1);
+	--shadow-2md: 8px 8px 0px rgba(127, 29, 29, 1);
+}
+
+/* Tailwind only generates utilities it finds referenced in scanned source
+   files. Neither class is applied anywhere yet, so without this line the
+   build would silently drop them — this keeps both ready to use as soon
+   as you add `font-qurdisma` / `font-object-sans` to a template. */
+@source inline('font-qurdisma font-object-sans');
+
+/* Custom Tailwind utility (works like any built-in one, e.g. can take
+   variants) that hides the scrollbar while keeping the element scrollable —
+   used on the projects horizontal scroller. */
+@utility no-scrollbar {
+	scrollbar-width: none; /* Firefox */
+	-ms-overflow-style: none; /* Edge/IE */
+	&::-webkit-scrollbar {
+		display: none; /* Chrome, Safari, Opera */
+	}
+}
+
+/* The projects scroller (+page.svelte) deliberately bleeds to the true
+   right edge of the viewport using 100vw math. 100vw always includes the
+   vertical scrollbar's width, while the page's visible area does not, so
+   that row can end up a few pixels wider than the screen. Clipping it here
+   is safe — nothing meaningful lives past the true edge, it's already
+   outside the visible design — and avoids a page-wide horizontal scrollbar. */
+html {
+	overflow-x: hidden;
+}
+
 /* Minimal readable defaults for markdown-rendered content (project bodies,
    the About bio). No design system here on purpose — just enough so text
    and images don't run together; restyle freely later. */

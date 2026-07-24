@@ -10,7 +10,7 @@ authors:
 categories:
   - Data journalism
   - Print
-date: December 20, 2023 2:09 PM
+date: 2025
 description: '"The Good News" is the weekly data visualization produced for the
   printed edition of taz, head of the Zukunft section.'
 himage: /uploads/zukunft-good-news/zukunft-preview.png

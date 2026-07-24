@@ -10,7 +10,7 @@ categories:
   - climate visualization
   - 3D
   - web development
-date: March 18, 2024 6:29 PM
+date: 2024
 description: This visualization looks at water as a finite resource, by showing
   our daily consumption in comparison with the popular lakes of Berlin and
   Brandenburg.

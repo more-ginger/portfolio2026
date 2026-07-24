@@ -7,7 +7,7 @@ categories:
   - Data visualization
   - Print
   - Illustration
-date: April 7, 2021 6:54 PM
+date: 2021
 description: Editorial data visualization produced for "The Charted Lexicon",
   the Popular Science's column on culture and society.
 himage: /uploads/pop-science-charted-lexicon/pscsp21_charted_bobross_final.jpg

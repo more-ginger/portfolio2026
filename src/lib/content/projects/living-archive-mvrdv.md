@@ -7,9 +7,8 @@ categories:
   - Archive visualization
   - Web development
   - Text visualization
-date: February 15, 2022 6:54 PM
-description: 'Project developed for “MVRDVHNI: The Living Archive of a Studio”
-  exhibition. The visualization arranges, on a timeline, the topics discussed by
+date: 2022
+description: 'The visualization arranges, on a timeline, the topics discussed by
   MVRDV in their documents and email exchanges, from 1990 to 2010.'
 himage: /uploads/living-archive-mvrdv/mvrdv-timeline-preview.png
 category: Archive

@@ -1,6 +1,6 @@
 ---
-title: AMD Essays
-slug: anthropocene-curriculum
+title: The Hyper-Visual Times
+slug: hyper-visual-times
 authors:
   - Jonas Rinderlin
   - Nathaniel La Celle-Peterson
@@ -13,7 +13,7 @@ categories:
   - Digital humanities
   - Web development
   - Text visualization
-date: 2021
+date: 2025
 description: This generative visualization complements seven thematic dossiers
   part of the Anthropocene Curriculum. These visualizations are meant as a
   navigational interface to support readers’ exploration of the essay.
