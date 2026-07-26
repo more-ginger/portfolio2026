@@ -9,9 +9,7 @@
 	<title>{frontMatter.title} — Francesca Morini</title>
 </svelte:head>
 
-<a href="/" class="text-sm hover:underline">&larr; Back to projects</a>
-
-<article class="font-open-sans mt-6">
+<article class="font-open-sans mt-6 mb-10 border-b pb-2">
 	<h1 class="font-qurdisma text-7xl">{frontMatter.title}</h1>
 
 	{#if frontMatter.description}
@@ -54,3 +52,4 @@
 		{@html html}
 	</div>
 </article>
+<a href="/" class="text-sm hover:underline">&larr; Back to projects</a>

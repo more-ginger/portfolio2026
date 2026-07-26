@@ -2,57 +2,87 @@
 	"publications": [
 		{
 			"year": "2019",
+			"authors": "Morini, F.",
 			"title": "Seeding context, cultivating perspectives. A situated method for urban cartography to explore temporal patterns in the contemporary city",
 			"link": "https://hdl.handle.net/10589/149351",
 			"publication": "POLITesi"
 		},
 		{
 			"year": "2022",
+			"authors": "Morini, F., Dörk, M., Appelgren, E.",
 			"title": "Sensing what’s new: considering ethics when using sensor data in journalistic practices",
 			"link": "https://doi.org/10.1080/21670811.2022.2134161",
-			"publication": "Digital Journalism"
+			"publication": "Digital Journalism 11 (3), 465-483"
 		},
 		{
 			"year": "2023",
+			"authors": "Garreton, M., Morini, F., Paz Moyano, D., Grün, GC, Parra, D., Dörk, M.",
 			"title": "Data Stories of Water: Studying the Communicative Role of Data Visualizations within Long-form Journalism",
 			"link": "10.1111/cgf.14815",
-			"publication": "COMPUTER GRAPHICS forum"
+			"publication": "Computer graphics forum 42 (3), 99-110"
 		},
 		{
 			"year": "2023",
+			"authors": "Garretón, M., Morini, F., Celhay, P, Dörk, M., Parra, D.",
 			"title": "Attitudinal effects of data visualizations and illustrations in data stories",
 			"link": "10.1109/TVCG.2023.3248319",
-			"publication": "IEEE Transactions on Visualization and Computer Graphics"
+			"publication": "IEEE Transactions on Visualization and Computer Graphics 30 (7), 4039-4054"
 		},
 		{
 			"year": "2023",
+			"authors": "Morini, F.",
 			"title": "Data Journalism as “Terra Incognita”: Newcomers’ Tensions in Shifting Towards Data Journalism Epistemology",
 			"link": "https://doi.org/10.1080/17512786.2023.2185656",
-			"publication": "Journalism Practice"
+			"publication": "Journalism Practice 19 (1), 76-92"
 		},
 		{
 			"year": "2023",
+			"authors": "Morini, F., Eschenbacher, A., Hartmann, J., Dörk, M.",
 			"title": "From shock to shift: Data visualization for constructive climate journalism",
 			"link": "10.1109/TVCG.2023.3327185",
 			"publication": "IEEE Transactions on Visualization and Computer Graphics"
 		},
 		{
 			"year": "2024",
+			"authors": "Morini, F.",
 			"title": "Value sensitive design ",
 			"link": "https://doi.org/10.7146/journalistica.v18i1.146560",
-			"publication": "Journalistica"
+			"publication": "Journalistica 18 (1)"
 		},
 		{
 			"year": "2024",
+			"authors": "Morini, F.",
 			"title": "Different yet complementary: A systematic literature review on data journalism in visualization research and journalism studies",
 			"link": "https://journals.sagepub.com/doi/10.1177/14648849241237897",
-			"publication": "Journalism"
+			"publication": "Journalism 26 (2), 425-444"
 		},
 		{
 			"year": "2024",
+			"authors": "Morini, F.",
 			"title": "Design + Data Journalism: Shifting epistemologies, values, and practices",
 			"link": "https://www.diva-portal.org/smash/record.jsf?pid=diva2%3A1903991&dswid=2059",
 			"publication": "Södertörns högskola"
+		},
+		{
+			"year": "2025",
+			"authors": "Appelgren, E., Morini, F., Maya, A.",
+			"title": "Visualizing national and international deaths with data during the COVID-19 pandemic",
+			"link": "https://tidsskrift.dk/journalistica/article/download/145134/199419/346684",
+			"publication": "Journalistica 19 (1)"
+		},
+		{
+			"year": "2025",
+			"authors": "Morini, F., Albrecht, K.",
+			"title": "The Hyper-Visual Times",
+			"link": "",
+			"publication": "xCoAx 1 (13), 317 - 325"
+		},
+		{
+			"year": "2025",
+			"authors": "Morini, F., Garretón, M., Pomerance, J., Zeissig, N., de Günther, S., Thomet, F., Freyberg, L., Kyriazis, I., Scholz, A. and Dörk, M.",
+			"title": "Critical Interactivity: Exploration and Narration in Data Visualization",
+			"link": "https://ieeexplore.ieee.org/iel8/38/11086537/10958192.pdf",
+			"publication": "IEEE Computer Graphics and Applications"
 		}
 	],
 	"teaching": [

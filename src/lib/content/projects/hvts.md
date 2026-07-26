@@ -14,7 +14,7 @@ categories:
   - ML
 date: 2025
 description: The Hyper-Visual Times investigates journalism through the use of visual methods and data visualization, the project aims at charting the landscape of online news.
-himage: /uploads/anthropocene-curriculum/dmacp-pip.png
+himage: /uploads/hvts/preview-2.png
 category: Web
 ---
 

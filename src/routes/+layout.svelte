@@ -30,32 +30,24 @@
 	}
 </script>
 
-<!-- Fixed: the slight page-wide horizontal scroll was caused by `w-screen`
-     (`width: 100vw`) here and on the <header>. 100vw is the full viewport
-     width INCLUDING the vertical scrollbar, while the page's actual visible
-     area excludes it — so anything sized with `w-screen` was a few pixels
-     wider than the screen. Neither div needs it: a block element already
-     fills its parent's width on its own. The projects scroller in
-     +page.svelte still uses 100vw deliberately (to bleed to the true right
-     edge), so its residual overhang is now just clipped via `overflow-x:
-     hidden` on <html> in app.css instead of removing the effect. -->
-<div
-	class="min-h-screen text-red-900"
-	class:bg-amber-200={!isProjectPage}
-	class:bg-white={isProjectPage}
->
+<div class="text-red-900" class:bg-amber-200={!isProjectPage} class:bg-white={isProjectPage}>
 	<header
 		class="sticky top-0 z-100 px-2 py-6"
 		class:bg-amber-200={!isProjectPage}
 		class:bg-white={isProjectPage}
 	>
-		<div class="m-auto grid grid-cols-3 justify-stretch px-10">
-			<nav class="col-start-2 m-auto">
-				<a href="/" class="w-fit"><img src="/uploads/about/about-logo.svg" /></a>
+		<div class="px-4 md:m-auto md:grid md:grid-cols-3 md:justify-stretch md:px-10">
+			<nav class="m-auto md:col-start-2">
+				<a href="/" class="w-fit"
+					><img src="/uploads/about/about-logo.svg" class="w-10 md:w-full" /></a
+				>
 			</nav>
+			<!-- Hidden below `md:` — on mobile this same Intro/Projects/Vitae
+			     navigation is reachable via the fixed pill nav below instead,
+			     so the top-right menu button would just be redundant there. -->
 			<nav
 				aria-label="Page menu with sections"
-				class="relative place-self-center justify-self-end"
+				class="relative hidden place-self-center justify-self-end md:block"
 				style={menuOpen
 					? '--menu-bg: var(--color-amber-200); --menu-fg: var(--color-red-900);'
 					: '--menu-bg: var(--color-red-900); --menu-fg: var(--color-amber-200);'}
@@ -147,6 +139,32 @@
 					</ul>
 				{/if}
 			</nav>
+
+			<!-- Mobile stand-in for the "Menu" dropdown above (hidden below
+			     `md:`, since the two never show at the same time): a fixed
+			     pill nav to "Projects"/"Vitae" (no "Intro" — the user is
+			     already there, so it'd just be one more thing to tap past).
+			     `fixed` means a single instance stays on screen the whole
+			     time you scroll, reusing the same `scrollToSection` used by
+			     the desktop menu items above. -->
+			<div class="fixed bottom-6 left-6 z-50 flex gap-3 md:hidden">
+				<button
+					type="button"
+					onclick={() => scrollToSection('projects')}
+					class="flex cursor-pointer items-center gap-2 rounded-full bg-red-900 px-4 py-2 text-sm text-amber-200"
+				>
+					<span class="h-3 w-3 shrink-0 rounded-full bg-amber-200"></span>
+					Projects
+				</button>
+				<button
+					type="button"
+					onclick={() => scrollToSection('vitae')}
+					class="flex cursor-pointer items-center gap-2 rounded-full border-2 border-red-900 px-4 py-2 text-sm text-red-900"
+				>
+					<span class="h-3 w-3 shrink-0 rounded-full border-2 border-red-900"></span>
+					Vitae
+				</button>
+			</div>
 		</div>
 	</header>
 
@@ -156,7 +174,7 @@
 	<footer>
 		<nav class="flex justify-between px-6 py-8">
 			<p>FM 2026 design + code</p>
-			<a>Impressum</a>
+			<a href="/impressum">Impressum</a>
 		</nav>
 	</footer>
 </div>
