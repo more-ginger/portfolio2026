@@ -17,11 +17,11 @@ description: This visualization looks at water as a finite resource, by showing
 himage: /uploads/water-berlin/wie-viel-wasser-preview-project.jpg
 ---
 
+![](/uploads/water-berlin/wie-viel-wasser-example-screen.png)
+
 Each person living in Berlin consumes approximately 150 litres of water per day. This includes personal consumption, which amounts to the 75% of the total usage, and industrial consumption, which accounts for the other 25%. Berlin’s drinking water doesn’t come from lakes, of course, but from the ground. Essentially, groundwater is replenished through rain. However, the Berlin water system can be described as a partially closed water cycle, since wastewater gets treated and partially reused to augment available groundwater.
 
 These are the conceptual premises behind the "Wie Viel Wasser?" project. Using the metaphor of surface water, we decided to compare the daily water consumption of Berliners with the capacity of individual lakes in the region. Why? Because Berliners love their lakes, but also because by imagining water as a finite resource its fragility becomes painfully visible.
-
-![](/uploads/water-berlin/wie-viel-wasser-example-screen.png)
 
 The user can search from a variety of lakes, upon selection the 3D model of their favourite model will pop up: if blue the water capacity is bigger than Berlin's water consumption, if red the lake would be depleted in less than one day.
 

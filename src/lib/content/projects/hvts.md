@@ -2,35 +2,28 @@
 title: The Hyper-Visual Times
 slug: hyper-visual-times
 authors:
-  - Jonas Rinderlin
-  - Nathaniel La Celle-Peterson
-  - Marian Dörk
-  - Alan Woo
-  - Christoph Rosol
-  - Dirk Wintergrün
-link: 'https://www.anthropocene-curriculum.org/anthropogenic-markers '
+  - Philipp Proff
+  - Jocelyn Shek
+  - Nemuël Link
+  - Angela Brennecke
+  - Kim Albrecht
+link: 'https://ctechfilmuniversity.github.io/hyper-visual-times/'
 categories:
-  - Digital humanities
+  - News Visualization
   - Web development
-  - Text visualization
+  - ML
 date: 2025
-description: This generative visualization complements seven thematic dossiers
-  part of the Anthropocene Curriculum. These visualizations are meant as a
-  navigational interface to support readers’ exploration of the essay.
+description: The Hyper-Visual Times investigates journalism through the use of visual methods and data visualization, the project aims at charting the landscape of online news.
 himage: /uploads/anthropocene-curriculum/dmacp-pip.png
-category: Archive
+category: Web
 ---
 
-The special publication Anthropogenic Markers: Stratigraphy and Context explores and contours some of the historical contexts, epistemic settings, and conceptual interventions around the ongoing work of Anthropocene geology. In seven thematic dossiers, contributions from the fields of geochemistry and paleobiology, history and science studies, artistic research, archaeology, literary studies, and anthropology reflect on selected material markers of human impacts on earthly strata. Taken together, they form a unique interdisciplinary conversation across positions and perspectives, helping to map out and expand upon the many ways of tracing the evidence that defines the onset of a human-dominated and crisis-laden epoch.
+The quantity of news items published online on a daily basis is nothing short of humongous. Even one specific outlet publishes hundreds of articles, entries, and corrections that become part of the online news ecosystem. The Hyper-Visual Times is an artistic and investigative project dedicated to exploring the material characteristics of online news, by testing potential ways to transcend reading an individual article in favour of contextual ways to explore news. By using one year of data from two large Western news outlets – The New York Times (USA) and Zeit Online (DE) – the project introduces three essays and visualisation-driven interfaces that explore news articles en masse.
 
-![](/uploads/anthropocene-curriculum/video_amd.gif)
+### Chapters
 
-![](/uploads/anthropocene-curriculum/dmacp-visualization-expanded.png)
+In The Geo-politics of News, geographical entities are extracted from individual articles and used to uncover the geopolitical alignment of newspapers. In Discursive Interrelations, the textual metadata of news pieces are aggregated into clusters of topics – exposing recurrent relations between topics in the New York Times. In Person of Interest, all meta images included with articles have been processed with a facial recognition algorithm and then clustered together to showcase who are most represented people over the course of one year of coverage.
 
-![](/uploads/anthropocene-curriculum/dmacp-visualization-expanded-selected.png)
+### Scope of the Project
 
-### Manaul revision and tagging of the essays
-
-The opening essay of each dossier is complemented by interactive visualizations displaying its key temporal events. These visualizations are meant as a navigational interface that supports and encourage readers’ in-depth exploration of the essay. Events are mapped according to their temporal distribution and position in text, then plotted. The time axis itself adapts in order to fit hundred thousands of years on the screen. The causal relations among events are represented by arcs, spanning across the visualization. As the reader scrolls by, events are highlighted, accompanying the natural reading flow. Essays have been manually revised and tagged using a HTML syntax built on top of the W3C’s OWL time anthology \[https://www.w3.org/TR/2020/CR-owl-time-20200326] and custom identifiers for temporal events’ causality. The meta-data is then fetched and used to create the visualizations.
-
-![](/uploads/anthropocene-curriculum/dmacp-synthax.png)
+Results bring forward some of the underlying mechanisms of journalism and put archives of newspapers up for grabs, not only as reflection and critique of current journalism practices, but also as evidence to the potential of data visualisation in supporting readers' experience with news content on a large scale.

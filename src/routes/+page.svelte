@@ -48,7 +48,9 @@
 		</div>
 	</div>
 	<div class="relative pt-20 pb-10">
-		<h1 class="font-qurdisma mb-8 text-7xl">Projects</h1>
+		<!-- `scroll-mt-28` keeps this heading from landing underneath the
+		     sticky header when the "Projects" menu item scrolls here. -->
+		<h1 id="projects" class="font-qurdisma mb-8 scroll-mt-28 text-7xl">Projects</h1>
 		<!-- This `100vw` is a deliberate full-bleed measurement (see the
 		     comment in +layout.svelte for why 100vw can overshoot the
 		     visible page by the scrollbar's width) — the resulting overhang
@@ -59,12 +61,12 @@
 		>
 			{#each data.projects as project (project.slug)}
 				<div
-					class="group box-shadow hover:shadow-2md mt-5 h-140 w-80 shrink-0 snap-start overflow-hidden rounded border bg-amber-200 shadow-md transition group-hover:bg-amber-100"
+					class="group box-shadow hover:shadow-2md mt-5 h-140 w-80 shrink-0 snap-start overflow-hidden rounded border bg-amber-200 shadow-md transition hover:bg-amber-100"
 				>
 					<a href="/projects/{project.slug}" class="group block h-full">
 						<div class=" flex justify-between px-4 py-2">
 							<p>{project.data.date}</p>
-							<img src="/uploads/icons/r-arrow.svg" />
+							<img src="/uploads/icons/r-arrow.svg" alt="Click to go to project" />
 						</div>
 						{#if project.data.himage}
 							<img
@@ -109,7 +111,8 @@
 	</div>
 	<div class="grid grid-cols-2 gap-x-6 py-20">
 		<div>
-			<h2 class="font-qurdisma my-8 text-7xl">Vitae</h2>
+			<!-- Same `scroll-mt-28` reasoning as the "Projects" heading above. -->
+			<h2 id="vitae" class="font-qurdisma my-8 scroll-mt-28 text-7xl">Vitae</h2>
 			{@html data.about.html}
 		</div>
 		<div>

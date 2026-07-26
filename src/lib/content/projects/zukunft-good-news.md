@@ -17,9 +17,9 @@ himage: /uploads/zukunft-good-news/zukunft-preview.png
 category: Data journalism
 ---
 
-Every Saturday, readers can find _die Gute Nachricht_ (the good news) on the cover of the Zukunft section, part of the wochentaz. The idea, developed by Luise Strothmann and Malene Gürgen together with their team, is to offer readers a positive take on an interesting and contemporary topic. Ranging from climate protection to the reduction of the gender-gap, each good news is introduced by a data visualization, blending photographic and design elements.
-
 ![](/uploads/zukunft-good-news/zukunft_printed_2.jpg)
+
+Every Saturday, readers can find _die Gute Nachricht_ (the good news) on the cover of the Zukunft section, part of the wochentaz. The idea, developed by Luise Strothmann and Malene Gürgen together with their team, is to offer readers a positive take on an interesting and contemporary topic. Ranging from climate protection to the reduction of the gender-gap, each good news is introduced by a data visualization, blending photographic and design elements.
 
 ### Balancing topics, metaphors, and data visualization
 
