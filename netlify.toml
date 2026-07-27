@@ -1,0 +1,15 @@
+# Netlify reads this file in preference to the build settings in the site UI,
+# which is the point: the UI was left pointing at `.next` (a Next.js output
+# folder) and no such directory exists in a SvelteKit project. Committing the
+# settings here means the repo, not the dashboard, decides how this deploys.
+#
+# `publish` must stay in sync with @sveltejs/adapter-netlify — the adapter
+# reads this exact value to know where to write the static assets, so changing
+# it here changes where the build lands. `build` is the adapter's default.
+[build]
+  command = "npm run build"
+  publish = "build"
+
+[build.environment]
+  # Netlify's default Node is older than what SvelteKit 2 / Vite 7 expect.
+  NODE_VERSION = "22"

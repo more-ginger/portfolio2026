@@ -1,10 +1,12 @@
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-netlify';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
-		// adapter-auto picks the right deployment adapter (Vercel, Netlify, Node, etc.)
-		// based on where you deploy. Swap for a specific adapter later if needed.
+		// Pinned to Netlify rather than adapter-auto: the adapter reads the
+		// publish directory straight out of netlify.toml, so the build output
+		// and the deploy settings can't drift apart the way they did when
+		// Netlify was still pointing at a Next.js `.next` folder.
 		adapter: adapter(),
 	},
 };
