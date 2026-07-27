@@ -27,21 +27,27 @@
    variants) that hides the scrollbar while keeping the element scrollable —
    used on the projects horizontal scroller. */
 @utility no-scrollbar {
+	overscroll-behavior-x: contain;
 	scrollbar-width: none; /* Firefox */
 	-ms-overflow-style: none; /* Edge/IE */
 	&::-webkit-scrollbar {
 		display: none; /* Chrome, Safari, Opera */
 	}
 }
-
 /* The projects scroller (+page.svelte) deliberately bleeds to the true
    right edge of the viewport using 100vw math. 100vw always includes the
    vertical scrollbar's width, while the page's visible area does not, so
    that row can end up a few pixels wider than the screen. Clipping it here
    is safe — nothing meaningful lives past the true edge, it's already
-   outside the visible design — and avoids a page-wide horizontal scrollbar. */
-html {
-	overflow-x: hidden;
+   outside the visible design — and avoids a page-wide horizontal scrollbar.
+
+   `clip` rather than `hidden` on purpose: `hidden` turns these into scroll
+   containers, which silently breaks `position: sticky` on the header (it
+   would anchor to that container instead of the viewport and just scroll
+   away). `clip` crops the same overflow without creating a scroll container. */
+html,
+body {
+	overflow-x: clip;
 }
 
 /* Minimal readable defaults for markdown-rendered content (project bodies,

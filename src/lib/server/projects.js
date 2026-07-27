@@ -25,7 +25,9 @@ function loadProjects() {
 		const { data, content } = matter(raw);
 
 		// Fall back to the filename if a file is ever missing a `slug` field.
-		const filename = filePath.split('/').pop();
+		// `split` always yields at least one segment, so `?? ''` is just to
+		// satisfy the checker rather than a case that can actually happen.
+		const filename = filePath.split('/').pop() ?? '';
 		const slug = data.slug ?? filename.replace(/\.md$/, '');
 
 		return {
@@ -37,7 +39,9 @@ function loadProjects() {
 	});
 
 	// Newest project first, matching the original site's ordering.
-	return projects.sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
+	// `getTime()` rather than subtracting the Date objects directly: the
+	// implicit valueOf() coercion works at runtime but isn't valid TypeScript.
+	return projects.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
 }
 
 // Parsed once per server start/build — the file list doesn't change at runtime.
@@ -48,7 +52,10 @@ export function getAllProjects() {
 	return projects;
 }
 
-/** A single project by its slug, or undefined if no project matches. */
+/**
+ * A single project by its slug, or undefined if no project matches.
+ * @param {string} slug
+ */
 export function getProjectBySlug(slug) {
 	return projects.find((project) => project.slug === slug);
 }

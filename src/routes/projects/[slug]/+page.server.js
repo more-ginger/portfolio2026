@@ -3,6 +3,7 @@ import { getProjectBySlug } from '$lib/server/projects.js';
 
 // `params.slug` comes from the `[slug]` folder name — this is what makes
 // every project's .md file reachable at its own URL, e.g. /projects/oekogas.
+/** @param {{ params: { slug: string } }} event */
 export function load({ params }) {
 	const project = getProjectBySlug(params.slug);
 

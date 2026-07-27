@@ -1,5 +1,9 @@
 <script>
 	// `data.project` comes from +page.server.js's `load()` function.
+	// Spelled out rather than pulled from './$types.js': SvelteKit 2.70 no
+	// longer generates those per-route type files, so the usual import
+	// resolves to nothing. `data` holds the parsed front matter.
+	/** @type {{ data: { project: { slug: string; data: Record<string, any>; html: string } } }} */
 	let { data } = $props();
 
 	let { data: frontMatter, html } = $derived(data.project);
@@ -9,7 +13,7 @@
 	<title>{frontMatter.title} — Francesca Morini</title>
 </svelte:head>
 
-<article class="font-object-sans mt-6 mb-10 border-b pb-2">
+<article class="font-object-sans mt-6 mb-10 pb-2">
 	<h1 class="font-qurdisma text-7xl">{frontMatter.title}</h1>
 
 	{#if frontMatter.description}
@@ -24,8 +28,8 @@
 	     container) filled all the way to the article's right edge, leaving
 	     a big blank strip after "Year" that read as the year section being
 	     oversized, even though the pink box itself was already content-sized. -->
-	<div class="mt-6 flex w-full flex-wrap items-start rounded border bg-amber-100 text-sm">
-		<div class="w-8/9 border-r">
+	<div class="mt-6 w-full rounded border bg-amber-100 text-sm md:flex md:flex-wrap md:items-start">
+		<div class="md:w-8/9 md:border-r">
 			{#if frontMatter.authors}
 				<div class="p-2">
 					<h2 class="font-semibold uppercase">Collaborators</h2>
@@ -40,7 +44,7 @@
 			{/if}
 		</div>
 		{#if frontMatter.date}
-			<div class="my-auto w-1/9 p-2 text-center">
+			<div class="my-auto border-t p-2 md:w-1/9 md:border-none md:text-center">
 				<h2 class="font-semibold uppercase">Year</h2>
 				<p>{frontMatter.date}</p>
 			</div>
@@ -52,4 +56,6 @@
 		{@html html}
 	</div>
 </article>
-<a href="/" class="text-sm hover:underline">&larr; Back to projects</a>
+<div class="mb-10 w-full">
+	<a href="/" class="text-sm hover:underline">&larr; Back to projects</a>
+</div>
