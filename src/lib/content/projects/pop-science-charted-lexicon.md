@@ -10,7 +10,7 @@ categories:
 date: 2021
 description: Editorial data visualization produced for "The Charted Lexicon",
   Popular Science's column on culture and society.
-himage: /uploads/pop-science-charted-lexicon/pscsp21_charted_bobross_final.jpg
+himage: /uploads/pop-science-charted-lexicon/pscsp21_charted_bobross_final.webp
 category: Editorial
 ---
 
@@ -18,4 +18,4 @@ Charted Lexicon is Popular Science’s column on data art. For each topic, they 
 
 The fans of The Joy of Painting not only have an interest in learning the craft, they also want to chill, and Bob Ross, who hosted the program before he died in 1995, is a sure path to serenity. His subdued baritone and the gentle sound of a brush on canvas made him an ASMR artist for the analog age. You can almost feel stress evaporate watching the dabs and strokes coalesce into a landscape. Here’s a look at the science of elevating relaxation to an art form.
 
-![](/uploads/pop-science-charted-lexicon/pscsp21_charted_bobross_final_full.jpg)
+![](/uploads/pop-science-charted-lexicon/pscsp21_charted_bobross_final_full.webp)

@@ -14,10 +14,10 @@ date: 2024
 description: This visualization looks at water as a finite resource, by showing
   our daily consumption in comparison with the popular lakes of Berlin and
   Brandenburg.
-himage: /uploads/water-berlin/wie-viel-wasser-preview-project.jpg
+himage: /uploads/water-berlin/wie-viel-wasser-preview-project.webp
 ---
 
-![](/uploads/water-berlin/wie-viel-wasser-example-screen.png)
+![](/uploads/water-berlin/wie-viel-wasser-example-screen.webp)
 
 Each person living in Berlin consumes approximately 150 litres of water per day. This includes personal consumption, which amounts to 75% of the total usage, and industrial consumption, which accounts for the other 25%. Berlin’s drinking water doesn’t come from lakes, of course, but from the ground. Essentially, groundwater is replenished through rain. However, the Berlin water system can be described as a partially closed water cycle, since wastewater gets treated and partially reused to augment available groundwater.
 
@@ -27,6 +27,6 @@ The user can search from a variety of lakes; upon selection the 3D model of thei
 
 The underlying data have been crunched using Python, scaled using D3.js and rendered through Three.js. The geometries used as a base are real geographical features, scraped using the OSM API.
 
-![](/uploads/water-berlin/wie-viel-wasser-collage.png)
+![](/uploads/water-berlin/wie-viel-wasser-collage.webp)
 
 The app is optimized for mobile. The main visualization is always at the centre of the screen and additional information can be toggled exclusively by clicking on the bottom of the screen. Each lake has its own unique URL and can be shared with others.

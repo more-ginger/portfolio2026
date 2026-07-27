@@ -13,11 +13,11 @@ categories:
 date: 2025
 description: '"The Good News" is the weekly data visualization produced for the
   printed edition of taz, at the head of the Zukunft section.'
-himage: /uploads/zukunft-good-news/zukunft-preview.png
+himage: /uploads/zukunft-good-news/zukunft-preview.webp
 category: Data journalism
 ---
 
-![](/uploads/zukunft-good-news/zukunft_printed_2.jpg)
+![](/uploads/zukunft-good-news/zukunft_printed_2.webp)
 
 Every Saturday, readers can find _die Gute Nachricht_ (the good news) on the cover of the Zukunft section, part of the wochentaz. The idea, developed by Luise Strothmann and Malene Gürgen together with their team, is to offer readers a positive take on an interesting and contemporary topic. Ranging from climate protection to the reduction of the gender-gap, each good news is introduced by a data visualization, blending photographic and design elements.
 
@@ -27,10 +27,10 @@ The biggest design challenge we face with _die Gute Nachricht_ is to always find
 
 The two examples shown below are a good illustration of the type of interpretation work we do when working on the graphics. The issue on the left depicts the decriminalization of queer sex by showing each country in the form of a flower. We chose flowers to signal the fragile condition queer people have to face and the importance of granting equal rights, beyond politics and religious beliefs. Similarly, the visualization on the right shows data about working hours. The images of people are picked from old archival imagery and strive to represent diverse workers in different scenarios.
 
-![](/uploads/zukunft-good-news/zukunft_printed.png)
+![](/uploads/zukunft-good-news/zukunft_printed.webp)
 
 ### The pipeline: from manual drafting to digital design
 
 Behind the scenes, the design process has to be extremely efficient due to the high turn-around. Each week we have to juggle between finishing the current graphic and working on the next concept. The image below shows the production pipeline of a standard issue, step by step. The initial idea is usually sketched by hand and shown to the editorial team, who can ask for changes or express their ideas about the direction. Then a first low-fidelity digital draft is created, which again is used in a quick feedback round. Lastly, the graphic is finalized with the addition of labels, high-resolution assets, and filters.
 
-![](/uploads/zukunft-good-news/zukunft-pipeline.png)
+![](/uploads/zukunft-good-news/zukunft-pipeline.webp)

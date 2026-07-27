@@ -58,9 +58,71 @@
 	function handleKeydown(event) {
 		if (event.key === 'Escape') menuOpen = false;
 	}
+
+	// Social preview metadata. `page.data` is the merged result of every
+	// `load()` on the current route, so project pages surface `project` here
+	// and the homepage surfaces `about` — which lets one block below cover
+	// both instead of repeating the tags in each route's own <svelte:head>.
+	const SITE_NAME = 'Francesca Morini';
+	const FALLBACK_DESCRIPTION = 'Information designer and visualization researcher based in Berlin.';
+
+	let meta = $derived.by(() => {
+		const project = page.data.project;
+		if (project) {
+			return {
+				title: `${project.data.title} — ${SITE_NAME}`,
+				description: project.data.description ?? FALLBACK_DESCRIPTION,
+				// Pre-rendered card per project (see static/og/), not the himage
+				// itself: himages are WebP, which some platforms won't render in a
+				// preview, and they're cropped here to fill the card edge to edge.
+				image: `/og/${project.slug}.jpg`,
+				width: '1200',
+				height: '630',
+				type: 'article',
+			};
+		}
+		return {
+			title: SITE_NAME,
+			description: page.data.about?.bio?.description ?? FALLBACK_DESCRIPTION,
+			// Hand-designed card, kept at its native 16:9 rather than cropped to
+			// 1.91:1 — hence the different height from the project cards below.
+			image: '/og-image.jpg',
+			width: '1200',
+			height: '675',
+			type: 'website',
+		};
+	});
+
+	// Crawlers ignore root-relative image paths, so these have to be absolute.
+	// Deriving the origin from `page.url` keeps it correct on the Netlify
+	// deploy, on preview deploys, and on localhost without hardcoding a domain.
+	let ogImage = $derived(new URL(meta.image, page.url.origin).href);
+	let canonical = $derived(new URL(page.url.pathname, page.url.origin).href);
 </script>
 
 <svelte:window onclick={handleOutsideClick} onkeydown={handleKeydown} />
+
+<!-- No <title> here on purpose — each route sets its own, and a second one
+     would just be dead markup the browser ignores. -->
+<svelte:head>
+	<meta name="description" content={meta.description} />
+	<link rel="canonical" href={canonical} />
+
+	<meta property="og:site_name" content={SITE_NAME} />
+	<meta property="og:type" content={meta.type} />
+	<meta property="og:title" content={meta.title} />
+	<meta property="og:description" content={meta.description} />
+	<meta property="og:url" content={canonical} />
+	<meta property="og:image" content={ogImage} />
+	<meta property="og:image:width" content={meta.width} />
+	<meta property="og:image:height" content={meta.height} />
+	<meta property="og:image:alt" content={meta.title} />
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content={meta.title} />
+	<meta name="twitter:description" content={meta.description} />
+	<meta name="twitter:image" content={ogImage} />
+</svelte:head>
 
 <div
 	class="relative w-screen text-red-900"
