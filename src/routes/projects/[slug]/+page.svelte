@@ -9,7 +9,7 @@
 	<title>{frontMatter.title} — Francesca Morini</title>
 </svelte:head>
 
-<article class="font-open-sans mt-6 mb-10 border-b pb-2">
+<article class="font-object-sans mt-6 mb-10 border-b pb-2">
 	<h1 class="font-qurdisma text-7xl">{frontMatter.title}</h1>
 
 	{#if frontMatter.description}
