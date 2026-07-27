@@ -11,7 +11,7 @@ categories:
   - Print
   - Urban visualization
 date: 2020
-description: Time of a Square is an interactive long read scrollable article and
+description: Times of a Square is an interactive long read scrollable article and
   printed booklet that let the reader explore temporality in Rosenthaler Platz,
   Berlin.
 himage: /uploads/toasq/times2.png
@@ -22,7 +22,7 @@ The article has been developed in the broader frame of my MA thesis. Time as an 
 
 ![](/uploads/toasq/times6.png)
 
-Time of a Square is a long-read, scrollable article to explore temporality in Rosenthaler Platz, Berlin. Apart from designing and supporting the development of the final article and its visualization, I critically addressed and structured a novel data collection model to gather situated knowledge in the urban context. The resulting work is both an interactive webpage to navigate situated data and a series of printed artifacts. The project was exhibited at Torino Graphic Days 2019.
+Times of a Square is a long-read, scrollable article to explore temporality in Rosenthaler Platz, Berlin. Apart from designing and supporting the development of the final article and its visualization, I critically addressed and structured a novel data collection model to gather situated knowledge in the urban context. The resulting work is both an interactive webpage to navigate situated data and a series of printed artifacts. The project was exhibited at Torino Graphic Days 2019.
 
 ![](/uploads/toasq/times3.jpg)
 

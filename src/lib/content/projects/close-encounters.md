@@ -10,12 +10,12 @@ categories:
   - Graphic design
 date: 2020
 description: A personal project about UFOs. The different views show how
-  extraterrestrial sightnings have increased in the last decade worlwide.
+  extraterrestrial sightings have increased in the last decade worldwide.
 himage: /uploads/close-encounters/ufo_timeline_detail.png
 category: Web
 ---
 
-While all eyes were on the still-raging pandemic, the Pentagon quietly released their records of reported UFO sightings around the world (yes, really). The newly declassified information came on the heels of years of witness testimonies collected by the for several decades. So, in need of a little comic relief from the monotony of lockdown life, we decided to comb through the new material and see what the data might reveal! Some entries were incredibly detailed, including close descriptions of each UFO’s design, brightness, and speed. Some seemed more offhand, or vague. All of them were weird. We had so many questions. Where do these testimonies send to come from? When are they most often reported? For a broader view, we designed a , complete with glowing hotspots of supposed extra-terrestrial activity, then a timeline dating back to 2017.
+While all eyes were on the still-raging pandemic, the Pentagon quietly released their records of reported UFO sightings around the world (yes, really). The newly declassified information came on the heels of years of witness testimonies collected by NUFORC for several decades. So, in need of a little comic relief from the monotony of lockdown life, we decided to comb through the new material and see what the data might reveal! Some entries were incredibly detailed, including close descriptions of each UFO’s design, brightness, and speed. Some seemed more offhand, or vague. All of them were weird. We had so many questions. Where do these testimonies come from? When are they most often reported? For a broader view, we designed a website, complete with glowing hotspots of supposed extra-terrestrial activity, then a timeline dating back to 2017.
 
 ![](/uploads/close-encounters/ufo_timeline.png)
 

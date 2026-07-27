@@ -13,3 +13,11 @@
 [build.environment]
   # Netlify's default Node is older than what SvelteKit 2 / Vite 7 expect.
   NODE_VERSION = "22"
+
+# The Klimakarten project was renamed from the `klimaland` slug, so its old URL
+# would otherwise 404 for anyone arriving from an existing link or a search
+# result. 301 (permanent) tells search engines to carry the ranking across.
+[[redirects]]
+  from = "/projects/klimaland"
+  to = "/projects/klimakarten"
+  status = 301

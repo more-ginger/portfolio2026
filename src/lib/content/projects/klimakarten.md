@@ -1,6 +1,6 @@
 ---
 title: Sonnige Grüße aus dem Klimaland
-slug: klimaland
+slug: klimakarten
 authors:
   - Johanna Hartmann
   - Anna Eschenbacher
@@ -22,9 +22,9 @@ himage: /uploads/klimaland/klimaland-preview.jpg
 category: Data journalism
 ---
 
-How can we measure Germany climate protection level? In this cooperation with taz, we investigated to which extents Germany’s pledges to implement climate protection strategies are followed by concrete regional development. We selected five different indicators for climate protection: mobility, waste, energy, buildings, and agriculture. We located, analysed, and visualised relevant data for each of these indicators at a regional level.
+How can we measure Germany’s climate protection level? In this cooperation with taz, we investigated to what extent Germany’s pledges to implement climate protection strategies are followed by concrete regional development. We selected five different indicators for climate protection: mobility, waste, energy, buildings, and agriculture. We located, analysed, and visualised relevant data for each of these indicators at a regional level.
 
-![The image shows two physical postcards compared, one for Germany and one for Potsdam. The visualization shows data for the mobility sector, specifically the number of cars per inhabitants for the two areas.](/uploads/klimaland/dsc0291-2048x1365.jpg 'The physical postcards')
+![The image shows two physical postcards compared, one for Germany and one for Potsdam. The visualization shows data for the mobility sector, specifically the number of cars per inhabitant for the two areas.](/uploads/klimaland/dsc0291-2048x1365.jpg 'The physical postcards')
 
 ### Multi-channel and highly customizable
 

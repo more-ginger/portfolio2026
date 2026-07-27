@@ -15,8 +15,8 @@ categories:
   - Text visualization
 date: 2021
 description: This generative visualization complements seven thematic dossiers
-  part of the Anthropocene Curriculum. These visualizations are meant as a
-  navigational interface to support readers’ exploration of the essay.
+  that are part of the Anthropocene Curriculum. These visualizations are meant as
+  a navigational interface to support readers’ exploration of the essay.
 himage: /uploads/anthropocene-curriculum/dmacp-pip.png
 category: Archive
 ---
@@ -29,10 +29,10 @@ The special publication Anthropogenic Markers: Stratigraphy and Context explores
 
 ### Manual revision and tagging of the essays
 
-The opening essay of each dossier is complemented by interactive visualizations displaying its key temporal events. These visualizations are meant as a navigational interface that supports and encourage readers’ in-depth exploration of the essay. Events are mapped according to their temporal distribution and position in text, then plotted. The time axis itself adapts in order to fit hundred thousands of years on the screen. The causal relations among events are represented by arcs, spanning across the visualization.
+The opening essay of each dossier is complemented by interactive visualizations displaying its key temporal events. These visualizations are meant as a navigational interface that supports and encourages readers’ in-depth exploration of the essay. Events are mapped according to their temporal distribution and position in text, then plotted. The time axis itself adapts in order to fit hundreds of thousands of years on the screen. The causal relations among events are represented by arcs, spanning across the visualization.
 
 ![](/uploads/anthropocene-curriculum/dmacp-visualization-expanded-selected.png)
 
-As the reader scrolls by, events are highlighted, accompanying the natural reading flow. Essays have been manually revised and tagged using a HTML syntax built on top of the W3C’s [OWL time anthology](https://www.w3.org/TR/2020/CR-owl-time-20200326) and custom identifiers for temporal events’ causality. The meta-data is then fetched and used to create the visualizations.
+As the reader scrolls by events are highlighted, accompanying the natural reading flow. Essays have been manually revised and tagged using a HTML syntax built on top of the W3C’s [OWL time anthology](https://www.w3.org/TR/2020/CR-owl-time-20200326) and custom identifiers for temporal events’ causality. The meta-data is then fetched and used to create the visualizations.
 
 ![](/uploads/anthropocene-curriculum/dmacp-synthax.png)

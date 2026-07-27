@@ -249,7 +249,7 @@
 	</div>
 	<div class="w-full pb-10">
 		<div class="m-auto w-1/2 md:w-1/6">
-			<img src="/uploads/about/about-chicken.png" alt="A doodle of a chicken" />
+			<img src="/uploads/about/chicken_walk.gif" alt="A doodle of a chicken" />
 			<p class="text-sm">Chickens = the best</p>
 		</div>
 	</div>

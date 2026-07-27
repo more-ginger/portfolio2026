@@ -12,8 +12,8 @@
 		     rather than a guess. Fill in before publishing. -->
 		<p class="mt-2">
 			Francesca Morini<br />
-			[Straße und Hausnummer]<br />
-			[PLZ und Ort]<br />
+			Bastianstrasse 11<br />
+			13375, Berlin<br />
 			Deutschland
 		</p>
 	</section>
@@ -75,6 +75,35 @@
 		<p class="mt-2">
 			Die durch die Seitenbetreiberin erstellten Inhalte und Werke auf diesen Seiten unterliegen dem
 			deutschen Urheberrecht. Beiträge Dritter sind als solche gekennzeichnet.
+		</p>
+	</section>
+</div>
+
+<div class="font-object-sans mt-10 mb-20">
+	<h1 class="font-qurdisma mb-8 text-7xl">Credits</h1>
+
+	<section class="max-w-2xl">
+		<h2 class="text-xl font-semibold">Design and Implementation</h2>
+		<!-- No real postal address exists anywhere in this project yet — a legal
+		     Impressum in Germany needs one, so this is left as a placeholder
+		     rather than a guess. Fill in before publishing. -->
+		<p class="mt-2">
+			I designed this website, then coded it with the support of Claude (Sonnet 5). Thanks to <a
+				class="underline"
+				href="https://annaeschenbacher.com">Anna Eschenbacher</a
+			>
+			for her kind feedback. Thanks <a class="underline" href="https://iamrob.in">iamrob.in</a>
+			and
+			<a class="underline" href="https://iamrob.in">jona.im</a> for being secret not so secret sources
+			of inspiration ;)
+		</p>
+		<p class="mt-2">
+			The fonts in use are
+			<a class="underline" href="https://typetype.org/de/fonts/tt-qurdisma/">TT Qurdisma</a> from
+			Anastasya Pogorelova, Antonina Zhulkova, Elizabeth Ostrovskaya and TypeType-Team and
+			<a class="underline" href="https://pangrampangram.com/products/object-sans"
+				>PP Object Open Sans</a
+			> by Alex Slobzheninov. Both have been purchased and licensed.
 		</p>
 	</section>
 </div>

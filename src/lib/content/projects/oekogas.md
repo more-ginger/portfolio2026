@@ -13,22 +13,22 @@ categories:
   - web development
   - UI design
 date: 2024
-description: The project consists in a lightweight search dashboard that can be
-  used to browse German gas supplier and the supposedly carbon-offsetting
+description: The project consists of a lightweight search dashboard that can be
+  used to browse German gas suppliers and the supposedly carbon-offsetting
   projects they finance.
 himage: /uploads/oekogas/oekogas-header.png
 ---
 
-Gas suppliers across Germany are advertising “climate-neutral natural gas” - but they are not keeping their promises, as reveald by CORRECTIV . Instead, protected forests are supposedly being cut down and even gas-fired power plants are being expanded. This investigation shows how companies are deceiving hundreds of thousands of customers and fueling the climate crisis.
+Gas suppliers across Germany are advertising “climate-neutral natural gas” - but they are not keeping their promises, as revealed by CORRECTIV. Instead, protected forests are supposedly being cut down and even gas-fired power plants are being expanded. This investigation shows how companies are deceiving hundreds of thousands of customers and fueling the climate crisis.
 
 ![](/uploads/oekogas/oekogas-figure-1.png)
 
-The search dashboard is embedded within this broader investigation and helps readers in finding their own gas supplier. The user can look up their gas company through the search function. Alternatively, a list of Bundesländer is included below. By expanding the individual accordions, the user sees the gas companies active in a specific state. By clicking on a company, the right view is upadated, showing a broad overview of the projects and carbon-offsetting credits. Individual projects are listed below and can be expanded to reveal more precise information about their context.
+The search dashboard is embedded within this broader investigation and helps readers find their own gas supplier. The user can look up their gas company through the search function. Alternatively, a list of Bundesländer is included below. By expanding the individual accordions, the user sees the gas companies active in a specific state. By clicking on a company, the right view is updated, showing a broad overview of the projects and carbon-offsetting credits. Individual projects are listed below and can be expanded to reveal more precise information about their context.
 
 ![](/uploads/oekogas/oekogas-ui-1-.gif)
 
-From mobile, the layout is collapsed on a vertical column. Overall, the look and feel of the dashboard is quite simple. The individual projects are shown as tickets, hinting to the idea of a physical "Gutschrift" to offset emissions. A simple stacked bar is shown at the top, to show how many companies and projects are involved in the investigation.
+From mobile, the layout is collapsed into a vertical column. Overall, the look and feel of the dashboard is quite simple. The individual projects are shown as tickets, hinting at the idea of a physical "Gutschrift" to offset emissions. A simple stacked bar is shown at the top, to show how many companies and projects are involved in the investigation.
 
 ![](/uploads/oekogas/oekogas-figure-2.png)
 
-The app has been embedded as an iFrame, deployed on a separate url to maximise flexibility in customising the looks and interactivity of the dashboard. The app has been developed together with [Luc Guillemot](https://lucguillemot.com/), a designer and developer based in Berlin.
+The app has been embedded as an iFrame, deployed on a separate URL to maximise flexibility in customising the looks and interactivity of the dashboard. The app has been developed together with [Luc Guillemot](https://lucguillemot.com/), a designer and developer based in Berlin.

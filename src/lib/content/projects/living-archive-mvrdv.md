@@ -14,8 +14,8 @@ himage: /uploads/living-archive-mvrdv/mvrdv-timeline-preview.png
 category: Archive
 ---
 
-After gaining access to the MVRDV architecture studio’s archive, we decided to visualise how they talked about architecture for over 10 years. We started by collecting, cleaning and unwrapping all the e-mails between colleagues, contractors and the PR team. We extracted the relevant words that dealt with the financial, environmental or material aspects of architecture. Then we created two of visualisations that allow exploration, where users can filter relevant terms according to their category and frequency.
-On top of this we trained an AI using the material for PR. Visitors can feed the AI few words to draft a speculative MVRDV project. @mvrdvsht is the twitter fee where this non-sense architecture is collected.
+After gaining access to the MVRDV architecture studio’s archive, we decided to visualise how they talked about architecture for over 10 years. We started by collecting, cleaning and unwrapping all the e-mails between colleagues, contractors and the PR team. We extracted the relevant words that dealt with the financial, environmental or material aspects of architecture. Then we created two visualisations that allow exploration, where users can filter relevant terms according to their category and frequency.
+On top of this we trained an AI using the material for PR. Visitors can feed the AI a few words to draft a speculative MVRDV project. @mvrdvsht is the Twitter feed where this non-sense architecture is collected.
 
 ![](/uploads/living-archive-mvrdv/mvrdv-timeline-filtered.png)
 
@@ -27,10 +27,10 @@ To start with such an archive is a complicated endeavor. It requires a smart and
 
 ![](/uploads/living-archive-mvrdv/mvrdv-data-structure.png)
 
-As visible in the figure above, the data cleaning pipeline brought us from the raw material to a structured dataset. The year was the most important feature. How many time over the years would one word be used? Are there words that become more popular in time? Hence the dataset includes how many time one term is used and to what category it belongs.
+As visible in the figure above, the data cleaning pipeline brought us from the raw material to a structured dataset. The year was the most important feature. How many times over the years would one word be used? Are there words that become more popular over time? Hence the dataset includes how many times one term is used and to what category it belongs.
 
-To determine the category we run a named-entity recognition algorithm, capable of extracting and recognizing terms, based on their meaning and belonging. We ended up with thousand of terms, ready to be visualized.
+To determine the category we ran a named-entity recognition algorithm, capable of extracting and recognizing terms, based on their meaning and belonging. We ended up with thousands of terms, ready to be visualized.
 
 ![](/uploads/living-archive-mvrdv/mvrdv-timeline-filter.png)
 
-The double-visualization interface presents itself like a small toy for MVRDV founders, employees, as well as curious users. The reader can filter according to word, category or frequency. From the visualizations it is possible to see how certain words appear, disappear, and then reappear again. Technical terms, materials, but also discussions about finance and people are central to the practice from this architectural sign.
+The double-visualization interface presents itself like a small toy for MVRDV founders, employees, as well as curious users. The reader can filter according to word, category or frequency. From the visualizations it is possible to see how certain words appear, disappear, and then reappear again. Technical terms, materials, but also discussions about finance and people are central to the practice of this architectural firm.
