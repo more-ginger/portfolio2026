@@ -143,6 +143,14 @@
 			"icon": "📚"
 		},
 		{
+			"year": "Workshop",
+			"place": "UvG Universidad del Vale de Guatemala, Guatemala City",
+			"title": "Storytelling with Data Workshop",
+			"description": "",
+			"link": "",
+			"icon": "📚"
+		},
+		{
 			"year": "SoSe 2026",
 			"place": "FHP, Potsdam",
 			"title": "Information Visualization",
@@ -244,6 +252,54 @@
 			"year": "2024",
 			"place": "Umweltbundesamt, Berlin",
 			"title": "The outsiders 👽 are inside: designers and design practices in newsrooms",
+			"description": "",
+			"link": "",
+			"icon": "🗣️"
+		},
+		{
+			"year": "2025",
+			"place": "xCoAx, Dundee, Scotland",
+			"title": "The Hyper-Visual Times",
+			"description": "",
+			"link": "",
+			"icon": "🗣️"
+		},
+		{
+			"year": "2025",
+			"place": "SciCAR 2025, Dortmund",
+			"title": "Bewegte Daten – Best und Worst Practice für Datenvisualisierung im Video",
+			"description": "",
+			"link": "",
+			"icon": "🗣️"
+		},
+		{
+			"year": "2026",
+			"place": "Pennsylvania State University, USA (Virtual)",
+			"title": "Too Little — Too Much, To Easy — Too Hard Insights on Designing Visualizations about Climate Change for Lay-Audiences",
+			"description": "",
+			"link": "",
+			"icon": "🗣️"
+		},
+		{
+			"year": "2026",
+			"place": "EUROVIS 2026, Nottingham",
+			"title": "Critical Interactivity: Exploration and Narration in Data Visualization",
+			"description": "",
+			"link": "",
+			"icon": "🗣️"
+		},
+		{
+			"year": "2026",
+			"place": "Netzwerk Recherche Jahreskonferenz 2026, Hamburg",
+			"title": "Hitzestress und Gift im Wasser – selbst gemessen",
+			"description": "",
+			"link": "",
+			"icon": "🗣️"
+		},
+		{
+			"year": "2026 Upcoming!",
+			"place": "SciCAR 2026, Dortmund",
+			"title": "Looking at people looking at vis: an overview of perception research in visualization",
 			"description": "",
 			"link": "",
 			"icon": "🗣️"

@@ -40,7 +40,7 @@
 				{data.about.bio.title}
 			</h1>
 			<h2 class="pt-10 md:pt-20 md:text-xl">{data.about.bio.description}</h2>
-			<div class="absolute -top-10 right-0 -z-0 w-50 md:-top-25 md:-right-41 md:w-1/3 md:w-2/5">
+			<div class="absolute -top-10 right-0 -z-0 w-50 md:-top-45 md:-right-60 md:w-1/3 md:w-100">
 				<img
 					src={data.about.bio.portrait[1]}
 					alt="little doodle of a smiling face with curly hair"
@@ -58,7 +58,7 @@
 			>
 				{#each data.projects as project (project.slug)}
 					<div
-						class="group box-shadow hover:shadow-2md mt-5 h-140 w-80 shrink-0 snap-start overflow-hidden rounded border bg-amber-200 shadow-md transition hover:bg-amber-100"
+						class="group box-shadow hover:shadow-2md relative mt-5 h-140 w-80 shrink-0 snap-start overflow-hidden rounded border bg-amber-200 shadow-md transition hover:bg-amber-100"
 					>
 						<a href="/projects/{project.slug}" class="group block h-full">
 							<div class=" flex justify-between px-4 py-2">
@@ -79,9 +79,11 @@
 								<p class="mt-2 px-4 text-sm">{project.data.description}</p>
 							{/if}
 							{#if project.data.categories}
-								<p class="mt-2 px-4 text-xs">
-									{project.data.categories.join(', ')}
-								</p>
+								<div class="absolute bottom-0 mb-2 w-full border-t">
+									<p class="mt-2 px-4 text-xs">
+										{project.data.categories.join(', ')}
+									</p>
+								</div>
 							{/if}
 						</a>
 					</div>
@@ -110,7 +112,7 @@
 		</div>
 	</div>
 	<div class="grid grid-cols-1 gap-x-6 py-10 md:grid-cols-2 md:py-20">
-		<div>
+		<div class="[&>p>a]:underline">
 			<!-- Same `scroll-mt-28` reasoning as the "Projects" heading above. -->
 			<h2 id="vitae" class="font-qurdisma my-8 scroll-mt-28 text-7xl">Vitae</h2>
 			{@html data.about.html}

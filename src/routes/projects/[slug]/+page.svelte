@@ -24,7 +24,7 @@
 	     container) filled all the way to the article's right edge, leaving
 	     a big blank strip after "Year" that read as the year section being
 	     oversized, even though the pink box itself was already content-sized. -->
-	<div class="mt-6 flex w-full flex-wrap items-start border bg-amber-100 text-sm">
+	<div class="mt-6 flex w-full flex-wrap items-start rounded border bg-amber-100 text-sm">
 		<div class="w-8/9 border-r">
 			{#if frontMatter.authors}
 				<div class="p-2">

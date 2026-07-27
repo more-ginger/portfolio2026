@@ -64,7 +64,7 @@
 					aria-haspopup="true"
 					aria-expanded={menuOpen}
 					aria-controls="menu-list"
-					class="flex w-32 cursor-pointer items-center gap-2 rounded-3xl bg-(--menu-bg) py-2 pr-4 pl-3 text-center text-(--menu-fg)"
+					class="flex w-32 cursor-pointer items-center gap-2 rounded-3xl bg-(--menu-bg) py-2 pr-2 pl-6 text-(--menu-fg)"
 				>
 					<!-- Three overlapping circles, standing in for the collapsed-menu
 					     icon in the reference design. `stroke="currentColor"` follows
@@ -82,7 +82,7 @@
 						<circle cx="32" cy="16" r="14" />
 						<circle cx="48" cy="16" r="14" />
 					</svg>
-					Menu
+					<span>Menu</span>
 				</button>
 
 				{#if menuOpen}
