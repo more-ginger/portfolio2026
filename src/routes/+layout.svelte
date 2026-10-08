@@ -3,6 +3,10 @@
 	import '../app.css';
 	// Reactive current-route info (replaces the old `$app/stores` `page` store).
 	import { page } from '$app/state';
+	// `goto` lets the menu return to the homepage before scrolling; `tick`
+	// waits for that page's DOM to exist before we look for the section.
+	import { goto } from '$app/navigation';
+	import { tick } from 'svelte';
 
 	// `children` is the Svelte 5 way of receiving whatever page/route
 	// is being rendered inside this layout (equivalent to <slot /> in Svelte 4).
@@ -32,17 +36,34 @@
 		{ id: 'vitae', label: 'Vitae' },
 	];
 
-	// Smoothly scrolls to a section by id, or to the very top when `id` is
-	// null (used for "Intro"). The three sections only exist on the
-	// homepage; `?.` makes this a no-op instead of throwing on other routes.
+	// Scrolls to a section, first returning to the homepage when we are not
+	// already there. The three sections only exist on the homepage, so from a
+	// project or journal page the lookup below would find nothing and the
+	// click would silently do nothing — which is exactly what used to happen.
 	/** @param {string | null} id */
-	function scrollToSection(id) {
+	async function scrollToSection(id) {
 		menuOpen = false;
+
+		const wasOnHomepage = page.url.pathname === '/';
+		if (!wasOnHomepage) {
+			// `noScroll` stops SvelteKit from jumping to the top as part of the
+			// navigation, which would otherwise race the scroll we do just below.
+			await goto('/', { noScroll: true });
+			// `goto` resolves once the homepage is rendered; `tick` flushes the
+			// pending DOM update so `getElementById` can actually find the section.
+			await tick();
+		}
+
+		// Smooth when already on the homepage, instant straight after a
+		// navigation: the page is several screens tall, and animating that whole
+		// distance on top of a page change reads as lag rather than as motion.
+		const behavior = wasOnHomepage ? 'smooth' : 'instant';
+
 		if (id === null) {
-			window.scrollTo({ top: 0, behavior: 'smooth' });
+			window.scrollTo({ top: 0, behavior });
 			return;
 		}
-		document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+		document.getElementById(id)?.scrollIntoView({ behavior, block: 'start' });
 	}
 
 	// Runs after the button's own click has already toggled `menuOpen`, so the
