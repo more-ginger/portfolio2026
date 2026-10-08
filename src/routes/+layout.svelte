@@ -11,7 +11,9 @@
 	// Project detail pages get a white background instead of the site's
 	// usual amber, set here since the background lives on this shared
 	// layout wrapper rather than in each individual +page.svelte.
-	let isProjectPage = $derived(page.url.pathname.startsWith('/projects/'));
+	let isProjectPage = $derived(
+		page.url.pathname.startsWith('/projects/') || page.url.pathname.startsWith('/journal/'),
+	);
 
 	// Menu toggles on click and closes only on a deliberate act: the button
 	// again, one of the items, a click outside, or Escape. Moving the cursor
