@@ -276,11 +276,7 @@
 			     `fixed` means a single instance stays on screen the whole
 			     time you scroll, reusing the same `scrollToSection` used by
 			     the desktop menu items above. -->
-	<div
-		class="fixed -bottom-1 left-0 z-50 w-full px-3 md:hidden"
-		class:bg-amber-200={!isProjectPage}
-		class:bg-white={isProjectPage}
-	>
+	<div class="fixed -bottom-1 left-0 z-50 w-full bg-transparent px-3 md:hidden">
 		<div class="flex w-full justify-between justify-items-stretch gap-2 py-6">
 			<button
 				type="button"
@@ -309,7 +305,7 @@
 			<button
 				type="button"
 				onclick={() => scrollToSection('vitae')}
-				class="flex cursor-pointer items-center gap-2 rounded-full border-2 border-amber-200 bg-red-900 px-4 py-2 text-sm text-amber-200"
+				class="flex cursor-pointer items-center gap-2 rounded-full bg-red-900 px-4 py-2 text-sm text-amber-200"
 			>
 				<span class="h-3 w-3 shrink-0 rounded-full border-2 bg-amber-200"></span>
 				Vitae
@@ -320,7 +316,11 @@
 	<main class="mx-auto max-w-4xl px-6">
 		{@render children()}
 	</main>
-	<footer class="fixed bottom-0 w-screen bg-amber-200">
+	<footer
+		class="absolute bottom-0 w-screen bg-amber-200"
+		class:bg-amber-200={!isProjectPage}
+		class:bg-white={isProjectPage}
+	>
 		<nav class="flex justify-between border-t px-6 pt-2 pb-20 md:pb-2">
 			<p class="md:text-md text-sm">FM 2026 design + code</p>
 			<a class="md:text-md text-sm underline" href="/impressum">Impressum</a>

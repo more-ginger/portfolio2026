@@ -29,6 +29,6 @@
 		</div>
 	</div>
 </article>
-<div class="mb-10 w-full">
+<div class="w-full pb-20">
 	<a href="/" class="text-sm hover:underline">&larr; Back to home</a>
 </div>
