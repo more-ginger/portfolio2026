@@ -160,7 +160,7 @@
 	     is given — is sealed in with the opaque background and can never
 	     rise above the doodle. That's why the menu lives outside it. -->
 	<header class="sticky top-0 left-0 z-10 w-screen px-2 py-6">
-		<div class="md:m-auto md:grid md:grid-cols-3 md:justify-stretch md:px-10">
+		<div class="m-auto w-20 md:grid md:w-100 md:grid-cols-3 md:justify-stretch md:px-10">
 			<nav
 				class="z-30 m-auto rounded-2xl p-2 md:col-start-2"
 				class:bg-amber-200={!isProjectPage}
