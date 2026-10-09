@@ -16,7 +16,7 @@ date: 2026
 Recently I have been to Liepāja in Latvia to take part in [UPDATE](https://2026.updatefestival.lv/en), the Media Art and Technologies Festival. Together with two wonderful colleagues, [Myriel Milicevic](https://www.fh-potsdam.de/hochschule-karriere/personen/myriel-milicevic) and [Kerstin Niemann](https://www.fh-potsdam.de/hochschule-karriere/personen/kerstin-niemann), we ran a [four-day workshop](https://2026.updatefestival.lv/en/workshops/debunking) mixing together experimental cartography and speculative design to understand and reimagine one piece of Liepāja local history: Artillery battery no. 1 No. 1. These fortifications were built at the beginning of the 20th century by the Russian tsarist army as a coastal defence battery, but were never put to use. The array of bunkers was built directly on the coast of the Baltic sea, north of Karosta, a military territory. They were dug only a few meters behind the shoreline and connected through underground tunnels. During the Soviet occupation, the fortifications were partially in use for military operations. In the decades after, the fortifications have been abandoned and the bunkers started to collapse into the sea, due to coastal erosion.
 
 ![](/uploads/debunking/earth-bunkers.webp)
-_Artillery battery no. 1 No. 1 as seen from Google Earth_
+_Artillery battery no. 1 No. 1 in Google Earth_
 
 Now, what remains of the bunkers sits directly on the shore. The buildings are quickly disappearing in the sea. This in-between state is what attracted our attention: how does the history of this place interact with us? What stories can be told about Artillery battery no. 1 so that it is not forgotten?
 
@@ -82,23 +82,23 @@ The last two days were dedicated to the setup of the exhibition. Unfortunately, 
 Here's the final result. The base piece is a 7-meter-long map of the coast hanging from the ceiling and stretching into the room. The map has been conceptualized, designed and printed by Nelina. I helped a little by providing the base map as a highly detailed .svg file using OSM data as a base.
 
 ![](/uploads/debunking/debunking.webp)
-_The complete setup. Shelves and interactive station not visible_
+_The complete setup. Shelves and interactive station not visible, photo by Nelina Neumann_
 
 She took it and created this very cool base layer where the history of the bunker was explained and where visitors were invited to chart their ideas for the future of these bunkers:
 
 ![](/uploads/debunking/bunkers1.webp)
-_The 7-meter-long map designed by Nelina, inviting visitors to re-design the future shoreline of Artillery Artillery battery no. 1 No. 1_
+_The 7-meter-long map designed by Nelina, inviting visitors to re-design the future shoreline of Artillery Artillery battery no. 1 No. 1, photo by Niköla Šūmākere_
 
 The part of the map stretched on the floor was used by Annie, Noah and Aljoscha as a playground. They positioned the miniature version of the bunkers, arranging them to recreate the original battery. Visitors were invited to play with the shapes, creating new arrangements and structures. However, the brittle nature of sand mixed with cement made the task difficult. The models disintegrated in the hands of visitors, just like the original full-sized bunkers.
 
 ![](/uploads/debunking/bunkers5.webp)
-_Annie, Noah and Aljoscha built miniatures of bunkers mixing cement with gravel and sand from the original Artillery battery no. 1_
+_Annie, Noah and Aljoscha built miniatures of bunkers mixing cement with gravel and sand from the original Artillery battery no. 1, photo by Niköla Šūmākere_
 
 To complete the piece, Agota projected a loop animating the 3D scans of Artillery battery no. 1, distorting the mapped physical space through a digital and artistic lens. Fred created a small digital prototype using satellite imagery to show the transformation of the coast in real time. Niköla printed large images of the bunkers and arranged them on the wall around the base layer. She collected samples of plants and wove them into the photos, exaggerating the takeover of the natural landscape over the human-made cement structure. Others were placed as ordered samples, terrariums and aquariums on shelves surrounding the map:
 
 ![](/uploads/debunking/bunkers3.webp)
 ![](/uploads/debunking/bunkers4.webp)
-_The sample collection curated by Niköla and Fred_
+_The sample collection curated by Niköla and Fred, photo by Niköla Šūmākere_
 
 After four days of working, this was the result. We started with a broad idea and some brief theoretical and practical inputs. We brought in inputs on data visualization & remote sensing (me), speculative design & experimental cartography (Myriel), and cultural heritage theory (Kerstin). The students built on top of this base with their unique set of skills and interests: product design, information visualization, creative coding, photography and exhibition design. It was very satisfying to see the project take shape and grow in unexpected directions.
 
