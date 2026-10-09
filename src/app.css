@@ -56,6 +56,15 @@ body {
 .markdown-body p {
 	margin-top: 1.25rem;
 }
+
+.markdown-body a {
+	text-decoration: underline;
+}
+
+.markdown-body h2 {
+	margin-top: 2rem;
+	font-size: 2rem;
+}
 .markdown-body h3 {
 	margin-top: 2rem;
 	font-size: 1.25rem;
@@ -64,5 +73,20 @@ body {
 .markdown-body img {
 	margin-top: 1.25rem;
 	max-width: 100%;
+	border-radius: 0.25rem;
+}
+
+/* Videos embedded in an article (raw <video> tags in the markdown). The
+   height cap is the point: the Polycam clips are phone screen recordings,
+   so at full container width a portrait video renders taller than the
+   viewport and the reader has to scroll past a single frame. `width: auto`
+   with `max-height` lets it scale down proportionally instead of being
+   squashed, and the auto margins keep the narrow result centred. */
+.markdown-body video {
+	display: block;
+	margin: 1.25rem auto 0;
+	width: auto;
+	max-width: 100%;
+	max-height: 80vh;
 	border-radius: 0.25rem;
 }

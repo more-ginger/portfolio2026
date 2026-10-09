@@ -3,6 +3,10 @@
 	import '../app.css';
 	// Reactive current-route info (replaces the old `$app/stores` `page` store).
 	import { page } from '$app/state';
+	// `goto` lets the menu return to the homepage before scrolling; `tick`
+	// waits for that page's DOM to exist before we look for the section.
+	import { goto } from '$app/navigation';
+	import { tick } from 'svelte';
 
 	// `children` is the Svelte 5 way of receiving whatever page/route
 	// is being rendered inside this layout (equivalent to <slot /> in Svelte 4).
@@ -11,7 +15,9 @@
 	// Project detail pages get a white background instead of the site's
 	// usual amber, set here since the background lives on this shared
 	// layout wrapper rather than in each individual +page.svelte.
-	let isProjectPage = $derived(page.url.pathname.startsWith('/projects/'));
+	let isProjectPage = $derived(
+		page.url.pathname.startsWith('/projects/') || page.url.pathname.startsWith('/journal/'),
+	);
 
 	// Menu toggles on click and closes only on a deliberate act: the button
 	// again, one of the items, a click outside, or Escape. Moving the cursor
@@ -27,20 +33,38 @@
 	const sections = [
 		{ id: null, label: 'Intro' },
 		{ id: 'projects', label: 'Projects' },
+		{ id: 'journal', label: 'Journal' },
 		{ id: 'vitae', label: 'Vitae' },
 	];
 
-	// Smoothly scrolls to a section by id, or to the very top when `id` is
-	// null (used for "Intro"). The three sections only exist on the
-	// homepage; `?.` makes this a no-op instead of throwing on other routes.
+	// Scrolls to a section, first returning to the homepage when we are not
+	// already there. The three sections only exist on the homepage, so from a
+	// project or journal page the lookup below would find nothing and the
+	// click would silently do nothing — which is exactly what used to happen.
 	/** @param {string | null} id */
-	function scrollToSection(id) {
+	async function scrollToSection(id) {
 		menuOpen = false;
+
+		const wasOnHomepage = page.url.pathname === '/';
+		if (!wasOnHomepage) {
+			// `noScroll` stops SvelteKit from jumping to the top as part of the
+			// navigation, which would otherwise race the scroll we do just below.
+			await goto('/', { noScroll: true });
+			// `goto` resolves once the homepage is rendered; `tick` flushes the
+			// pending DOM update so `getElementById` can actually find the section.
+			await tick();
+		}
+
+		// Smooth when already on the homepage, instant straight after a
+		// navigation: the page is several screens tall, and animating that whole
+		// distance on top of a page change reads as lag rather than as motion.
+		const behavior = wasOnHomepage ? 'smooth' : 'instant';
+
 		if (id === null) {
-			window.scrollTo({ top: 0, behavior: 'smooth' });
+			window.scrollTo({ top: 0, behavior });
 			return;
 		}
-		document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+		document.getElementById(id)?.scrollIntoView({ behavior, block: 'start' });
 	}
 
 	// Runs after the button's own click has already toggled `menuOpen`, so the
@@ -125,7 +149,7 @@
 </svelte:head>
 
 <div
-	class="relative w-screen text-red-900"
+	class="relative min-h-screen w-screen text-red-900"
 	class:bg-amber-200={!isProjectPage}
 	class:bg-white={isProjectPage}
 >
@@ -136,7 +160,7 @@
 	     is given — is sealed in with the opaque background and can never
 	     rise above the doodle. That's why the menu lives outside it. -->
 	<header class="sticky top-0 left-0 z-10 w-screen px-2 py-6">
-		<div class="md:m-auto md:grid md:grid-cols-3 md:justify-stretch md:px-10">
+		<div class="m-auto w-20 md:grid md:w-100 md:grid-cols-3 md:justify-stretch md:px-10">
 			<nav
 				class="z-30 m-auto rounded-2xl p-2 md:col-start-2"
 				class:bg-amber-200={!isProjectPage}
@@ -252,12 +276,8 @@
 			     `fixed` means a single instance stays on screen the whole
 			     time you scroll, reusing the same `scrollToSection` used by
 			     the desktop menu items above. -->
-	<div
-		class="fixed -bottom-1 left-0 z-50 w-full px-3 md:hidden"
-		class:bg-amber-200={!isProjectPage}
-		class:bg-white={isProjectPage}
-	>
-		<div class="flex w-full justify-between justify-items-stretch gap-6 py-6">
+	<div class="fixed -bottom-1 left-0 z-50 w-full bg-transparent px-3 md:hidden">
+		<div class="flex w-full justify-between justify-items-stretch gap-2 py-6">
 			<button
 				type="button"
 				onclick={() => scrollToSection(null)}
@@ -276,8 +296,16 @@
 			</button>
 			<button
 				type="button"
+				onclick={() => scrollToSection('projects')}
+				class="flex cursor-pointer items-center gap-2 rounded-full bg-red-900 px-4 py-2 text-sm text-amber-200"
+			>
+				<span class="h-3 w-3 shrink-0 rounded-full bg-amber-200"></span>
+				Journal
+			</button>
+			<button
+				type="button"
 				onclick={() => scrollToSection('vitae')}
-				class="flex cursor-pointer items-center gap-2 rounded-full border-2 border-amber-200 bg-red-900 px-4 py-2 text-sm text-amber-200"
+				class="flex cursor-pointer items-center gap-2 rounded-full bg-red-900 px-4 py-2 text-sm text-amber-200"
 			>
 				<span class="h-3 w-3 shrink-0 rounded-full border-2 bg-amber-200"></span>
 				Vitae
@@ -288,7 +316,11 @@
 	<main class="mx-auto max-w-4xl px-6">
 		{@render children()}
 	</main>
-	<footer>
+	<footer
+		class="absolute bottom-0 w-screen bg-amber-200"
+		class:bg-amber-200={!isProjectPage}
+		class:bg-white={isProjectPage}
+	>
 		<nav class="flex justify-between border-t px-6 pt-2 pb-20 md:pb-2">
 			<p class="md:text-md text-sm">FM 2026 design + code</p>
 			<a class="md:text-md text-sm underline" href="/impressum">Impressum</a>
