@@ -33,6 +33,7 @@
 	const sections = [
 		{ id: null, label: 'Intro' },
 		{ id: 'projects', label: 'Projects' },
+		{ id: 'journal', label: 'Journal' },
 		{ id: 'vitae', label: 'Vitae' },
 	];
 
@@ -280,7 +281,7 @@
 		class:bg-amber-200={!isProjectPage}
 		class:bg-white={isProjectPage}
 	>
-		<div class="flex w-full justify-between justify-items-stretch gap-6 py-6">
+		<div class="flex w-full justify-between justify-items-stretch gap-2 py-6">
 			<button
 				type="button"
 				onclick={() => scrollToSection(null)}
@@ -296,6 +297,14 @@
 			>
 				<span class="h-3 w-3 shrink-0 rounded-full bg-amber-200"></span>
 				Projects
+			</button>
+			<button
+				type="button"
+				onclick={() => scrollToSection('projects')}
+				class="flex cursor-pointer items-center gap-2 rounded-full bg-red-900 px-4 py-2 text-sm text-amber-200"
+			>
+				<span class="h-3 w-3 shrink-0 rounded-full bg-amber-200"></span>
+				Journal
 			</button>
 			<button
 				type="button"

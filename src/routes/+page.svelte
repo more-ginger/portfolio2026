@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { fade } from 'svelte/transition';
+
 	let { data } = $props();
 
 	// Publications list starts truncated; clicking "Expand" reveals the rest.
@@ -15,6 +17,60 @@
 	// reads as inert; hovering any card hands that look over to the cursor.
 	let activeIndex = $state(0);
 	let hoveredIndex = $state<number | null>(null);
+
+	// --- Teaching Journal badge gallery ---------------------------------
+	// Arrow-driven only: no scroller and no swipe, so the reader steps the
+	// stack one badge at a time like a photo gallery.
+	let activeBadgeIndex = $state(0);
+
+	// How many badges are on screen at once: the one in focus plus two
+	// stacked behind it. The rest stay hidden until the reader pages on.
+	const MAX_VISIBLE_BADGES = 4;
+
+	// Fixed tilts rather than Math.random(): a random angle would disagree
+	// between the server render and the client, and would re-roll on every
+	// step instead of staying put with its badge.
+	const BADGE_TILTS = [-7, 5, -4, 8, -6, 3];
+
+	// With a single entry there is nothing to step through: the stack area
+	// shows a placeholder standing in for future entries, and the arrows
+	// are hidden. Both come back by themselves once a second entry lands.
+	const hasStack = $derived(data.articles.length > 1);
+
+	const canStepBack = $derived(activeBadgeIndex > 0);
+	const cardCanStepBack = $derived(activeIndex > 0);
+	const canStepForward = $derived(activeBadgeIndex < data.articles.length - 1);
+	const cardCanStepForward = $derived(activeIndex < data.projects.length - 1);
+
+	function stepBadges(direction: number) {
+		const last = data.articles.length - 1;
+		activeBadgeIndex = Math.min(Math.max(activeBadgeIndex + direction, 0), last);
+	}
+
+	/**
+	 * Where a badge sits, given its distance from the focused one (`offset`,
+	 * 0 = in focus) and its index in the list, which fixes its tilt. Deriving
+	 * everything from that distance means one CSS transition animates the
+	 * whole stack whenever the focus moves, with nothing re-laid out.
+	 */
+	function badgeStyle(offset: number, index: number) {
+		const left =
+			offset > 0
+				? `calc(var(--stack-start) + ${offset - 1} * var(--stack-step))`
+				: offset < 0
+					? 'calc(var(--badge-w) * -1.4)' // on its way out to the left
+					: '0rem';
+		const tilt = BADGE_TILTS[index % BADGE_TILTS.length];
+		// One badge past the cap is still rendered, just transparent, so it
+		// fades in as it arrives instead of popping into existence.
+		const visible = offset >= 0 && offset < MAX_VISIBLE_BADGES;
+		return [
+			`left:${left}`,
+			`transform: rotate(${tilt}deg)`,
+			`z-index:${MAX_VISIBLE_BADGES - offset}`,
+			`opacity:${visible ? 1 : 0}`,
+		].join(';');
+	}
 
 	// Same card-width + gap measurement `scrollProjects` uses below, so the
 	// active card always matches wherever scroll-snap actually settles.
@@ -77,6 +133,7 @@
 			<h2 class=" pt-10 md:pt-20 md:text-xl">{data.about.bio.description}</h2>
 		</div>
 	</div>
+	<!-- Projects scroller -->
 	<div class="relative pt-20 pb-10">
 		<div>
 			<h1 id="projects" class="font-qurdisma mb-8 scroll-mt-28 text-7xl">Projects</h1>
@@ -128,22 +185,109 @@
 			<div class="mt-6 flex place-content-center gap-3 md:place-content-start">
 				<button
 					type="button"
+					disabled={!cardCanStepBack}
 					onclick={() => scrollProjects(-1)}
 					aria-label="Scroll projects left"
-					class="flex h-10 w-20 cursor-pointer items-center justify-center md:w-40"
+					class="flex h-10 w-20 cursor-pointer items-center justify-center disabled:cursor-not-allowed disabled:opacity-25 md:w-40"
 				>
 					<img src="/uploads/icons/r-arrow.svg" alt="" class="w-30 rotate-180" />
 				</button>
 				<button
 					type="button"
+					disabled={!cardCanStepForward}
 					onclick={() => scrollProjects(1)}
 					aria-label="Scroll projects right"
-					class="flex h-10 w-20 cursor-pointer items-center justify-center md:w-40"
+					class="flex h-10 w-20 cursor-pointer items-center justify-center disabled:cursor-not-allowed disabled:opacity-25 md:w-40"
 				>
 					<img src="/uploads/icons/r-arrow.svg" alt="" class="w-30" />
 				</button>
 			</div>
 		</div>
+	</div>
+	<div class="relative pt-10 pb-10">
+		<h1 id="journal" class="font-qurdisma mb-10 scroll-mt-28 text-7xl">Teaching Journal</h1>
+
+		<!-- Every badge is absolutely positioned straight from its distance to
+		     `activeBadgeIndex`, so stepping the gallery just re-runs one CSS
+		     transition across the whole stack — nothing moves in the document
+		     flow and there is no scroll container to swipe. The measurements
+		     live in custom properties so the same positioning maths serves
+		     both breakpoints. -->
+		<div
+			class="relative h-[20rem] [--badge-w:7rem] [--stack-start:9rem] [--stack-step:2.5rem] md:[--badge-w:15rem] md:[--stack-start:29rem] md:[--stack-step:7rem]"
+		>
+			{#each data.articles as article, i (i)}
+				{@const offset = i - activeBadgeIndex}
+				{#if offset >= -1 && offset <= MAX_VISIBLE_BADGES}
+					<img
+						src={article.data.badge}
+						alt=""
+						class="absolute top-0 w-(--badge-w) transition-all duration-500 ease-out"
+						style={badgeStyle(offset, i)}
+					/>
+				{/if}
+			{/each}
+
+			{#if !hasStack}
+				<!-- Stands in for the badges that will stack here as more entries
+				     are written, so the row doesn't read as broken while the
+				     journal holds one. It starts at `--stack-start` (where the
+				     real stack begins) and is centred against the focused
+				     badge's height rather than the container's, so it lines up
+				     at both breakpoints without a second set of offsets. -->
+				<div
+					aria-hidden="true"
+					class="pointer-events-none absolute top-[-1.5rem] right-0 left-[6rem] flex w-[100%] items-center md:top-0 md:left-[18rem] md:h-[100%] md:w-[80%]"
+				>
+					<img src="/uploads/icons/placeholder-journal.svg" alt="" class="w-full" />
+				</div>
+			{/if}
+
+			<!-- Only the badge in focus carries text. `aria-live` sits on the
+			     wrapper rather than inside the keyed block, so the region
+			     survives the swap and can announce each new entry. -->
+			<div
+				aria-live="polite"
+				class="absolute top-[11rem] left-0 z-100 w-full md:top-1/2 md:left-[16rem] md:w-[12rem] md:-translate-y-1/2"
+			>
+				{#key activeBadgeIndex}
+					<div in:fade={{ duration: 200 }}>
+						<h2 class="text-2xl">
+							<a href="/journal/{data.articles[activeBadgeIndex].slug}" class="hover:underline">
+								{data.articles[activeBadgeIndex].data.title}
+							</a>
+						</h2>
+						<p class="mt-2 text-sm">{data.articles[activeBadgeIndex].data.subtitle}</p>
+					</div>
+				{/key}
+				{#if hasStack}
+					<div class="mt-2 flex place-content-center gap-3 md:place-content-start">
+						<button
+							type="button"
+							onclick={() => stepBadges(-1)}
+							disabled={!canStepBack}
+							aria-label="Previous journal entry"
+							class="flex h-10 w-20 cursor-pointer items-center justify-center transition-opacity disabled:cursor-not-allowed disabled:opacity-25 md:w-40"
+						>
+							<img src="/uploads/icons/r-arrow.svg" alt="" class="w-30 rotate-180" />
+						</button>
+						<button
+							type="button"
+							onclick={() => stepBadges(1)}
+							disabled={!canStepForward}
+							aria-label="Next journal entry"
+							class="flex h-10 w-20 cursor-pointer items-center justify-center transition-opacity disabled:cursor-not-allowed disabled:opacity-25 md:w-40"
+						>
+							<img src="/uploads/icons/r-arrow.svg" alt="" class="w-30" />
+						</button>
+					</div>
+				{/if}
+			</div>
+		</div>
+
+		<!-- Same arrow treatment as the projects row. They disable at the ends
+		     rather than wrapping: the stack is a finite pile, and looping back
+		     round silently would hide where you are in it. -->
 	</div>
 	<div class="grid grid-cols-1 gap-x-6 pb-10 md:grid-cols-2 md:py-10 md:py-20">
 		<div class="[&>p>a]:underline">

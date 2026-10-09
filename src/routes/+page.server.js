@@ -1,4 +1,5 @@
 import { getAllProjects } from '$lib/server/projects.js';
+import { getAllArticles } from '$lib/server/articles';
 import { getAbout } from '$lib/server/about';
 
 // `load` runs on the server before the page renders and its return value
@@ -9,7 +10,12 @@ export function load() {
 		data: project.data,
 	}));
 
+	const articles = getAllArticles().map((article) => ({
+		slug: article.slug,
+		data: article.data,
+	}));
+
 	const about = getAbout();
 
-	return { projects, about };
+	return { projects, articles, about };
 }
