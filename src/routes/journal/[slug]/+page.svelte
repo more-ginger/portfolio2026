@@ -14,11 +14,19 @@
 </svelte:head>
 
 <article class="font-object-sans mt-6 mb-10 pb-2">
-	<h1 class="font-qurdisma text-9xl">{frontMatter.title}</h1>
-	<h2 class="mt-10 text-3xl">{frontMatter.subtitle}</h2>
-	<!-- Rendered from the article's markdown body. -->
-	<div class="markdown-body mt-10">
-		{@html html}
+	<div class="absolute left-[10rem] z-1 w-50 rotate-10 opacity-60 md:opacity-100">
+		<img
+			src={frontMatter.badge}
+			alt="Badge for the Update Festival in Liepaja Latvia where the workshop took place"
+		/>
+	</div>
+	<div class="relative z-2">
+		<h1 class="font-qurdisma text-8xl md:text-9xl">{frontMatter.title}</h1>
+		<h2 class="mt-6 text-3xl md:mt-10">{frontMatter.subtitle}</h2>
+		<!-- Rendered from the article's markdown body. -->
+		<div class="markdown-body mt-10">
+			{@html html}
+		</div>
 	</div>
 </article>
 <div class="mb-10 w-full">

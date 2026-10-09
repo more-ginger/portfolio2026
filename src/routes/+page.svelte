@@ -218,13 +218,28 @@
 		>
 			{#each data.articles as article, i (i)}
 				{@const offset = i - activeBadgeIndex}
+				{@const focused = offset === 0}
 				{#if offset >= -1 && offset <= MAX_VISIBLE_BADGES}
-					<img
-						src={article.data.badge}
-						alt=""
-						class="absolute top-0 w-(--badge-w) transition-all duration-500 ease-out"
+					<!-- Only the badge in focus is a working link. The ones stacked
+					     behind it are previews of entries you have not stepped to
+					     yet, so clicking one should not jump past the gallery —
+					     `pointer-events-none` keeps them inert, and the matching
+					     `tabindex`/`aria-hidden` keeps them out of the tab order and
+					     off the screen reader rather than leaving hidden links
+					     focusable. The positioning lives on the <a> so the link box
+					     tracks the badge exactly. -->
+					<a
+						href="/journal/{article.slug}"
+						aria-label={article.data.title}
+						aria-hidden={!focused}
+						tabindex={focused ? 0 : -1}
+						class="absolute top-0 block w-(--badge-w) transition-all duration-500 ease-out {focused
+							? ''
+							: 'pointer-events-none'}"
 						style={badgeStyle(offset, i)}
-					/>
+					>
+						<img src={article.data.badge} alt="" class="w-full" />
+					</a>
 				{/if}
 			{/each}
 
