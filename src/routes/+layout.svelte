@@ -149,7 +149,7 @@
 </svelte:head>
 
 <div
-	class="relative w-screen text-red-900"
+	class="relative min-h-screen w-screen text-red-900"
 	class:bg-amber-200={!isProjectPage}
 	class:bg-white={isProjectPage}
 >
@@ -320,7 +320,7 @@
 	<main class="mx-auto max-w-4xl px-6">
 		{@render children()}
 	</main>
-	<footer>
+	<footer class="fixed bottom-0 w-screen bg-amber-200">
 		<nav class="flex justify-between border-t px-6 pt-2 pb-20 md:pb-2">
 			<p class="md:text-md text-sm">FM 2026 design + code</p>
 			<a class="md:text-md text-sm underline" href="/impressum">Impressum</a>

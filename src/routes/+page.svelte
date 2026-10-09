@@ -105,7 +105,7 @@
 	<title>FM – Projects</title>
 </svelte:head>
 
-<div class="font-object-sans">
+<div class="font-object-sans mb-8">
 	<!-- `min-h-screen` keeps this filling roughly one mobile screen; reset at
 	     `md:` so desktop keeps its original, non-full-height layout. -->
 	<div class="pt-10 md:min-h-0 md:pt-20 md:pb-10">
